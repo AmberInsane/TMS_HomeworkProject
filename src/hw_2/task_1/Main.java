@@ -11,7 +11,7 @@ public class Main {
         dayDistance = 10.0;
         sumDistance = dayDistance;
 
-        for (int i = 0; i < daysCount; i++) {
+        for (int i = 0; i < daysCount - 1; i++) {
             dayDistance += dayDistance * 0.1;
             sumDistance += dayDistance;
         }
