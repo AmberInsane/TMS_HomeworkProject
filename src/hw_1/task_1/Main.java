@@ -1,4 +1,4 @@
-package hw_1.task1;
+package hw_1.task_1;
 
 public class Main {
     // String...args -> лучше все же вот так 'String[] args', хотя технически разницы нету
