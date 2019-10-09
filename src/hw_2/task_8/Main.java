@@ -16,7 +16,7 @@ public class Main {
         sumOdd = 0;
         sumEven = 0;
 
-        while (oddNum <= maxEvenNum){
+        while (evenNum <= maxEvenNum){
             sumEven += evenNum;
             sumOdd += oddNum;
 
