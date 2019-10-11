@@ -10,8 +10,8 @@ public class Main {
         int oddNum, evenNum, maxOddNum, maxEvenNum, sumOdd, sumEven;
         evenNum = 2; //the first not zero even num
         oddNum = 1; //the first oddSum num
-        maxEvenNum = 100;
-        maxOddNum = maxEvenNum - 1;
+        maxEvenNum = 100; //  если твоей программе, передать диапазон шире или последнее число будет нечетным, то придется переписывать код
+        maxOddNum = maxEvenNum - 1; // если используешь переменную внизу, то лучше заводить ее там же, рядом
 
         sumOdd = 0;
         sumEven = 0;
