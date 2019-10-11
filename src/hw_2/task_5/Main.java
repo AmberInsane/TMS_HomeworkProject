@@ -7,7 +7,8 @@ package hw_2.task_5;
 public class Main {
     public static void main(String[] args) {
         // раз ты используешь формат, то стоит придерживаться общего стиля, а не просто ставить пробелы между словами
-        System.out.format("%-4s %s%n", "inch",sm");
+        // done
+        System.out.format("%4s %8s%n", "inch","sm");
         for (int i = 1; i <= 20; i++) {
             System.out.format("%4d %8.2f%n", i, i * 2.54);
         }

@@ -4,33 +4,34 @@ package hw_2.task_4;
 // Main -> Task_4
 public class Main {
     public static void main(String[] args) {
-        int fistNum, secondNum, buffer, multResult;
+        int firstNum, secondNum, buffer, multResult;
         multResult = 0;
         try {
-            fistNum = Integer.parseInt(args[0]);
+            firstNum = Integer.parseInt(args[0]);
             secondNum = Integer.parseInt(args[1]);
 
-            System.out.print(fistNum + " * " + secondNum + " = ");
+            System.out.print(firstNum + " * " + secondNum + " = ");
 
-            if (fistNum < 0 && secondNum < 0) {
-                  fistNum = Math.abs(fistNum);
+            if (firstNum < 0 && secondNum < 0) {
+                  firstNum = Math.abs(firstNum);
                   secondNum = Math.abs(secondNum);
             }
 
            
-            if ((Math.abs(fistNum) > Math.abs(secondNum)) || (firstNum < 0)) {
+            if ((Math.abs(firstNum) > Math.abs(secondNum)) || (firstNum < 0)) {
                 //swap to get less number of iterations
                 //or to get positive number of iterations
-                buffer = fistNum;
-                fistNum = secondNum;
+                buffer = firstNum;
+                firstNum = secondNum;
                 secondNum = buffer;
             }
-            for (int i = 0; i < fistNum; i++) {
+            for (int i = 0; i < firstNum; i++) {
                 multResult += secondNum;
             }
 
             // я думаю что 'не используя операцию умножения' относилось ко всей программе
             // multResult *= isPos;
+            // done
             System.out.println(multResult);
         } catch (Exception e) {
             System.out.println("You should put in only integers");
