@@ -2,6 +2,8 @@ package hw_2.task_3;
 /*
 Вычислить: 1+2+4+8+...+256
  */
+
+// Main -> Task_3
 public class Main {
     public static void main(String[] args) {
         int sum = 0;
