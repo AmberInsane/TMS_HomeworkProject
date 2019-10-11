@@ -3,6 +3,8 @@ package hw_2.task_1;
 день он увеличивал дневную норму на 10% нормы предыдущего дня. Какой
 суммарный путь пробежит спортсмен за 7 дней?
 */
+
+// +
 public class Main {
     public static void main(String[] args) {
         int daysCount = 7;
