@@ -1,9 +1,11 @@
 package hw_2.task_4;
 //Составьте программу, вычисляющую A*B, не пользуясь операцией умножения.
 
+// Main -> Task_4
 public class Main {
     public static void main(String[] args) {
         int fistNum, secondNum, buffer, multResult;
+        // isPos - обычно шаблон названия булеан переменной
         int isPos = 1;
         multResult = 0;
         try {
@@ -28,6 +30,7 @@ public class Main {
                 multResult += secondNum;
             }
 
+            // я думаю что 'не используя операцию умножения' относилось ко всей программе
             multResult *= isPos;
             System.out.println(multResult);
         } catch (Exception e) {
