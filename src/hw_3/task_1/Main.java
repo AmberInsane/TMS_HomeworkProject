@@ -11,29 +11,29 @@ public class Main {
         int[] intArray = new int[3];
 
         Scanner scanner = new Scanner(System.in);
-        int maxInt = 0;
-        int minInt = 0;
-        int sumInt = 0;
-        int temp;
+
         for (int i = 0; i < intArray.length; i++) {
             System.out.println("Put in integer number " + (i + 1) + ":");
             intArray[i] = scanner.nextInt();
         }
-        /*
-        if (i == 0) {
-            maxInt = temp;
-            minInt = temp;
-        }
-        else if (temp < minInt)
-            minInt = temp;
-        else if (temp > maxInt)
-            maxInt = temp;
 
-        sumInt += temp;
-        intArray[i] = temp;
+        int maxInt = intArray[0];
+        int minInt = intArray[0];
+        int sumInt = 0;
+
+        for (int i = 1; i < intArray.length; i++) {
+
+            if (intArray[i] < minInt)
+                minInt = intArray[i];
+            else if (intArray[i] > maxInt)
+                maxInt = intArray[i];
+
+            sumInt += intArray[i];
+        }
 
         System.out.println("Sum is " + sumInt);
         System.out.println("Min is " + minInt);
-        System.out.println("Max is " + maxInt);*/
+        System.out.println("Max is " + maxInt);
+
     }
 }
