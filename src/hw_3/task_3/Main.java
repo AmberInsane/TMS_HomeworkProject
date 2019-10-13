@@ -5,7 +5,7 @@ import java.util.Arrays;
 //Есть массив чисел. Заменить каждый нечетный элемент массива на 0.
 public class Main {
     public static void main(String[] args) {
-        int[] array = new int [10]; // int [10] - пробел не нужен
+        int[] array = new int [10]; // int [10] - пробел не нужен, пользуйся форматированием
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 50);
         }
