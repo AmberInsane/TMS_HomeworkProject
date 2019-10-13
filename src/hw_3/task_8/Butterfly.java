@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 // бабочка супер, молодец
 public class Butterfly {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         int height, width;
@@ -24,20 +24,22 @@ public class Butterfly {
             height = 17;
             width = 17;
         }
-        int k; // k - так себе название
+        int symmetricIndex; // k - так себе название
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                if (i >= height / 2) // {}
-                    k = height - i - 1;
-                else // {}
-                    k = i;
+                if (i >= height / 2) {
+                    symmetricIndex = height - i - 1;
+                } else {
+                    symmetricIndex = i;
+                }
 
-                if ((j <= k) || (j >= width - k - 1)) {
-                    if (j >= width / 2) // {}
-                        k = width - j;
-                    else // {}
-                        k = j + 1;
-                    System.out.print(k);
+                if ((j <= symmetricIndex) || (j >= width - symmetricIndex - 1)) {
+                    if (j >= width / 2) {
+                        symmetricIndex = width - j;
+                    } else {
+                        symmetricIndex = j + 1;
+                    }
+                    System.out.print(symmetricIndex);
                 } else
                     System.out.print(" ");
             }

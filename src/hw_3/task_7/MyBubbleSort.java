@@ -13,13 +13,12 @@ public class MyBubbleSort {
         System.out.println("Before bubble sort:");
         System.out.println(Arrays.toString(array));
 
-        // мне кажется или код не отформатирован?
+        // мне кажется или код не отформатирован? кажется
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = i; j < array.length; j++) {
                 if (array[i] > array[j])
                     swap(array, i, j);
             }
-// пустая строка не нужна
         }
 
         System.out.println("After bubble sort:");
@@ -27,10 +26,10 @@ public class MyBubbleSort {
     }
 
     // i,j - так себе имена переменных
-    private static void swap(int[] arr, int i, int j) {
+    private static void swap(int[] arr, int leftIndex, int rightIndex) {
         int temp;
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        temp = arr[leftIndex];
+        arr[leftIndex] = arr[rightIndex];
+        arr[rightIndex] = temp;
     }
 }

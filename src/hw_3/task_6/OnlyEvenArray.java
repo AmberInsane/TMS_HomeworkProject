@@ -11,20 +11,19 @@ public class OnlyEvenArray {
         }
 
         Integer[] evenArrWithNulls = new Integer[array.length];
-        int n = 0; //counter of not null elements - измени название переменной и удали комментарий
-        // 'numberOfCopiedElements' длинное, но хорошее название
+        int numberOfCopiedElements = 0;
 
         for (int anArray : array) {
             if (anArray % 2 == 0) {
-                evenArrWithNulls[n++] = anArray;
+                evenArrWithNulls[numberOfCopiedElements++] = anArray;
             }
         }
 
         System.out.println("Array before changes: ");
         System.out.println(Arrays.toString(array));
 
-        int[] onlyEvenArr = new int[n];
-        for (int i = 0; i < n; i++) {
+        int[] onlyEvenArr = new int[numberOfCopiedElements];
+        for (int i = 0; i < numberOfCopiedElements; i++) {
             onlyEvenArr[i] = evenArrWithNulls[i];
         }
         System.out.println("Array with only even integers: ");
