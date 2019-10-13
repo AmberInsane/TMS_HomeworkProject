@@ -3,6 +3,7 @@ package hw_3.task_4;
 
 import java.util.Arrays;
 
+// вывод программы не самый красивый, но ок
 public class MultiplyTable {
     public static void main(String[] args) {
         int size = 9;
