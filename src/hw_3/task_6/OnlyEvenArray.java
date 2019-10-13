@@ -11,7 +11,8 @@ public class OnlyEvenArray {
         }
 
         Integer[] evenArrWithNulls = new Integer[array.length];
-        int n = 0; //counter of not null elements
+        int n = 0; //counter of not null elements - измени название переменной и удали комментарий
+        // 'numberOfCopiedElements' длинное, но хорошее название
 
         for (int anArray : array) {
             if (anArray % 2 == 0) {
