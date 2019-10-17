@@ -24,11 +24,11 @@ public class Person {
         return age;
     }
 
-    public String getText(){
+    public String getText() {
         return text;
     }
 
-    public void setText(String text){
+    public void setText(String text) {
         Person.text = text;
     }
 
