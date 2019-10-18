@@ -2,7 +2,6 @@ package hw_4.task_3;
 
 import hw_4.task_1.Person;
 
-// +
 public class PersonCounter {
     public static void main(String[] args) {
         Person[] people = new Person[6];
@@ -31,6 +30,7 @@ public class PersonCounter {
         return indexBefore <= 0;
     }
 
+    // я бы разделил этот метод на два: в одном считаю, в другом вывожу, а этот метод может возвращать объект с Person + counterom внутри
     private static void countByPerson(Person[] people, int currentIndex) {
         int personCounter = 1;
         for (int i = currentIndex + 1; i < people.length; i++) {
