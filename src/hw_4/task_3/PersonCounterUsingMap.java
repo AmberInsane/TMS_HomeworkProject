@@ -16,11 +16,11 @@ public class PersonCounterUsingMap {
         people[5] = new Person("Roger", 70);
 
         HashMap<Person, Integer> countMap = new HashMap<>();
-        for (Person aPeople : people) {
-            if (countMap.containsKey(aPeople)) {
-                countMap.put(aPeople, countMap.get(aPeople) + 1);
+        for (Person person : people) {
+            if (countMap.containsKey(person)) {
+                countMap.put(person, countMap.get(person) + 1);
             } else {
-                countMap.put(aPeople, 1);
+                countMap.put(person, 1);
             }
         }
         for (Map.Entry entry : countMap.entrySet()) {
