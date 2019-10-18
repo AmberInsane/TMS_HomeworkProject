@@ -1,5 +1,6 @@
 package hw_4.task_2;
 // 1. static 2. regular 3. constructor => constructor value
+// +
 public class ExecutionQueue {
     private static String msg;
 
