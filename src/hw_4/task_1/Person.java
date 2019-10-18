@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Person {
     private String name;
     private int age;
-    private static String text = "Hello from static";
+    private static String text = "Hello from static"; // static поля идут раньше других
 
     public Person() {
         this("no name", 0);
@@ -37,10 +37,11 @@ public class Person {
         return "Name: " + name + ", age: " + age + ".";
     }
 
+    // я думаю можно было просто использовать метод toString()
     public void show() {
         System.out.println(this);
     }
-
+// пустая строка не нужна
 
     @Override
     public int hashCode() {
