@@ -15,6 +15,7 @@ public class PersonCounterUsingMap {
         people[4] = new Person("Brian", 72);
         people[5] = new Person("Roger", 70);
 
+        // equalsPersonCountMap, countMap - не очень понятно что там лежит
         HashMap<Person, Integer> countMap = new HashMap<>();
         for (Person person : people) {
             if (countMap.containsKey(person)) {
