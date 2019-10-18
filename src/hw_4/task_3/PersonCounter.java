@@ -2,6 +2,7 @@ package hw_4.task_3;
 
 import hw_4.task_1.Person;
 
+// +
 public class PersonCounter {
     public static void main(String[] args) {
         Person[] people = new Person[6];
