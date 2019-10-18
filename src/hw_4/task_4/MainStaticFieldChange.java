@@ -2,6 +2,7 @@ package hw_4.task_4;
 
 import hw_4.task_1.Person;
 
+// +
 public class MainStaticFieldChange {
     private static Person[] people;
 
