@@ -2,16 +2,9 @@ package hw_5.task_2;
 
 import java.util.Arrays;
 
-/*
-сделать класс Warehouse, внутри которого массив (массив чего придумайте сами). Массив  должен быть immutable
-При создании объекта создается массив, заносятся в него данные, изменять или добавлять значения в массив после  этого  нельзя
-в классе должен быть метод next() который возвращает следующий элемент массива.
-Если дошли до последнего элемента при вызове next(), должно вернуть первый элемент
-также должен быть метод getArray() - который возвращает массив и переопределен метод toString()
- */
-public class Warehouse {
-    private static int currentBoxIndex = -1;
-    private Box[] boxes;
+public class Warehouse implements Cloneable {
+    private static int currentBoxIndex = 0;
+    private final Box[] boxes;
 
     public Warehouse(Box[] boxes) {
         this.boxes = boxes;
@@ -23,9 +16,16 @@ public class Warehouse {
         return copyOfBoxes;
     }
 
-    public Box next() {
-        currentBoxIndex = (currentBoxIndex + 1) % boxes.length;
-        return boxes[currentBoxIndex];
+    public Box next() throws CloneNotSupportedException {
+        Box cloneBox;
+        if (boxes.length != 0) {
+            cloneBox = boxes[currentBoxIndex].clone();
+            currentBoxIndex = (currentBoxIndex + 1) % boxes.length;
+        } else {
+            cloneBox = null;
+        }
+
+        return cloneBox;
     }
 
     @Override

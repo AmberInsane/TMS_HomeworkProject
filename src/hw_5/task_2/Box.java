@@ -1,6 +1,6 @@
 package hw_5.task_2;
 
-public class Box {
+public class Box implements Cloneable {
     private double weight;
     private double volume;
     private String number;
@@ -9,6 +9,10 @@ public class Box {
         this.weight = weight;
         this.volume = volume;
         this.number = number;
+    }
+
+    public Box clone() throws CloneNotSupportedException {
+        return (Box) super.clone();
     }
 
     public void setNumber(String number) {
