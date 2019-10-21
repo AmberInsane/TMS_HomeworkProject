@@ -5,10 +5,4 @@ public class Laptop implements Computer {
     public void turnOff() {
         System.out.println("I'll be back...");
     }
-
-    @Override
-    public void reset() {
-        turnOff();
-        turnOn();
-    }
 }

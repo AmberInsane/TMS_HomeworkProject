@@ -1,6 +1,6 @@
 package hw_5.task_3.houses;
 
-public class CountryHouse extends House implements Houseble {
+public class CountryHouse extends House implements Housable {
 
     private int numberOfLevels;
     private int numberOfTenants;

@@ -16,7 +16,8 @@ public abstract class House {
     public void turnOnHeating() {
         System.out.println("Hitting has been turned on");
     }
-    public House(String address,int numberOfLevels, int numberOfTenants){
+
+    public House(String address, int numberOfLevels, int numberOfTenants) {
         this.address = address;
         this.numberOfLevels = numberOfLevels;
         this.numberOfTenants = numberOfTenants;

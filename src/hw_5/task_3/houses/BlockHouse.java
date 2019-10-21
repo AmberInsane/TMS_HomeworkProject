@@ -1,12 +1,12 @@
 package hw_5.task_3.houses;
 
-public class BlockHouse extends House implements Houseble {
+public class BlockHouse extends House implements Housable {
     private int numberOfFlats;
     private int numberOfLevels;
     private int numberOfTenants;
     private String address;
 
-    public BlockHouse(String address,int numberOfLevels, int numberOfFlats, int numberOfTenants) {
+    public BlockHouse(String address, int numberOfLevels, int numberOfFlats, int numberOfTenants) {
         super(address, numberOfLevels, numberOfTenants);
         this.address = address;
         this.numberOfLevels = numberOfLevels;

@@ -9,5 +9,8 @@ public interface Computer {
         System.out.println("I'm going to die...");
     }
 
-    void reset();
+    default void reset(){
+        turnOff();
+        turnOn();
+    }
 }
