@@ -1,9 +1,9 @@
 package hw_5.task_3.houses;
 
 public abstract class House {
-    private int numberOfLevels;
-    private int numberOfTenants;
-    private String address;
+    private int numberOfLevels;     // обычно такие поля делают protected
+    private int numberOfTenants;     // обычно такие поля делают protected
+    private String address;     // обычно такие поля делают protected
 
     public int getNumberOfLevels() {
         return numberOfLevels;
@@ -17,6 +17,7 @@ public abstract class House {
         System.out.println("Hitting has been turned on");
     }
 
+    // конструктор идет раньше других методов
     public House(String address, int numberOfLevels, int numberOfTenants) {
         this.address = address;
         this.numberOfLevels = numberOfLevels;
