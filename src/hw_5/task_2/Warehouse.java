@@ -2,7 +2,7 @@ package hw_5.task_2;
 
 import java.util.Arrays;
 
-public class Warehouse implements Cloneable {
+public class Warehouse implements Cloneable { // implements Cloneable можно убрать
     // статик = одно для всех классов, а это значит создав два экземпляра твоего класса получим неверно работающую программу
     private static int currentBoxIndex = 0;
     private final Box[] boxes;
