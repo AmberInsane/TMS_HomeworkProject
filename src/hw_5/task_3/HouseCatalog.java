@@ -5,6 +5,7 @@ import hw_5.task_3.houses.*;
 public class HouseCatalog {
     private House[] houses;
 
+    // плохая практика хардкодить в конструкторе. лучше передавай аргументом
     public HouseCatalog() {
         this.houses = new House[]{
                 new CountryHouse("Hello st., 29", 2, 4),
