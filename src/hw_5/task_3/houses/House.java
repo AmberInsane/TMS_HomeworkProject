@@ -5,6 +5,13 @@ public abstract class House {
     private int numberOfTenants;     // обычно такие поля делают protected
     private String address;     // обычно такие поля делают protected
 
+    // конструктор идет раньше других методов
+    public House(String address, int numberOfLevels, int numberOfTenants) {
+        this.address = address;
+        this.numberOfLevels = numberOfLevels;
+        this.numberOfTenants = numberOfTenants;
+    }
+    
     public int getNumberOfLevels() {
         return numberOfLevels;
     }
@@ -15,12 +22,5 @@ public abstract class House {
 
     public void turnOnHeating() {
         System.out.println("Hitting has been turned on");
-    }
-
-    // конструктор идет раньше других методов
-    public House(String address, int numberOfLevels, int numberOfTenants) {
-        this.address = address;
-        this.numberOfLevels = numberOfLevels;
-        this.numberOfTenants = numberOfTenants;
     }
 }
