@@ -8,21 +8,31 @@ package hw_6.task_2;
 public class Engine {
     private boolean work = false;
 
-    public void start() {
+    public boolean isWork() {
+        return work;
+    }
+
+    public boolean turnOn() {
+        boolean success = false;
         if (!work) {
             work = true;
+            success = true;
             System.out.println("Engine is working");
         } else {
             System.out.println("Engine has already started");
         }
+        return success;
     }
 
-    public void drownOut() {
+    public boolean turnOff() {
+        boolean success = false;
         if (work) {
             work = false;
+            success = true;
             System.out.println("Engine is drowning out");
         } else {
             System.out.println("Engine has already drowned out");
         }
+        return success;
     }
 }

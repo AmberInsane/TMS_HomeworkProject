@@ -7,6 +7,7 @@ package hw_6.task_2;
 public class Transmission {
     private static int MIN_GEAR = 0;
     private static int MAX_GEAR = 7;
+
     private int gear;
 
     public Transmission() {
@@ -19,6 +20,7 @@ public class Transmission {
         } else {
             System.out.println("I can't up the gear, it's maximum");
         }
+        System.out.println("Current gear is " + gear);
     }
 
     public void downTransmission() {
@@ -27,6 +29,7 @@ public class Transmission {
         } else {
             System.out.println("I can't down the gear, it's minimum");
         }
+        System.out.println("Current gear is " + gear);
     }
 
     public int getGear() {

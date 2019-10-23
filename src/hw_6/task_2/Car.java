@@ -7,7 +7,7 @@ package hw_6.task_2;
 Когда машина едет, то пускай выведет на экран текущую скорость
  */
 public class Car {
-    private boolean work = false;
+    private boolean isWork = false;
     private Transmission transmission;
     private Engine engine;
 
@@ -16,34 +16,36 @@ public class Car {
         this.transmission = new Transmission();
     }
 
-    public void pedalGas() {
-        if (!work) {
-            work = true;
-            System.out.println("You pedaled, good job");
+    public boolean isWork() {
+        return isWork;
+    }
+
+    public void turnOff() {
+        isWork = false;
+    }
+
+    public Transmission getTransmission() {
+        return transmission;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void pushGasPedal() {
+        if (!isWork) {
+            System.out.println("You pedaled, good job. Car is moving");
+            isWork = true;
         } else {
             System.out.println("Please, stop touch it");
         }
     }
 
-    public void start() {
-        if (!work) {
-            engine.start();
-            transmission.upTransmission();
-            pedalGas();
-        }
-    }
-
     public int getCurrentSpeed() {
-        return this.transmission.getGear() * 20;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "work=" + work +
-                ", transmission=" + transmission +
-                ", engine=" + engine +
-                ", currentSpeed=" + getCurrentSpeed() +
-                '}';
+        int currentSpeed = 0;
+        if (isWork) {
+            currentSpeed = transmission.getGear() * 20;
+        }
+        return currentSpeed;
     }
 }
