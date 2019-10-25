@@ -26,16 +26,15 @@ public class CarController {
     }
 
     private void showMenu() {
-        StringBuffer menuStringBuffer = new StringBuffer();
-        menuStringBuffer.append("1 - Start engine\n");
-        menuStringBuffer.append("2 - Up transmission\n");
-        menuStringBuffer.append("3 - Push gas pedal\n");
-        menuStringBuffer.append("4 - Down transmission\n");
-        menuStringBuffer.append("5 - Show speed\n");
-        menuStringBuffer.append("6 - Turn off engine\n");
-        menuStringBuffer.append("7 - Help\n");
-        menuStringBuffer.append("8 - Exit\n");
-        System.out.println(menuStringBuffer);
+        String menuString = "1 - Start engine\n" +
+                "2 - Up transmission\n" +
+                "3 - Push gas pedal\n" +
+                "4 - Down transmission\n" +
+                "5 - Show speed\n" +
+                "6 - Turn off engine\n" +
+                "7 - Help\n" +
+                "8 - Exit\n";
+        System.out.println(menuString);
     }
 
     private void commandAction(int commandNumber) {
@@ -95,7 +94,7 @@ public class CarController {
                     System.out.println("Wow. You're really crazy to go out on the speed of " + car.getCurrentSpeed() + ".");
                     System.out.println("Don't try suicide - nobody's worth it (Queen)");
                 } else {
-                    if (car.getEngine().turnOn()) {
+                    if (car.getEngine().isWork()) {
                         System.out.println("It wasn't great idea to leave the engine turned on");
                     }
                 }

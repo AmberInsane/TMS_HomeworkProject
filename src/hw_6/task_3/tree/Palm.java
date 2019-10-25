@@ -4,6 +4,6 @@ import hw_6.task_3.fruit.Coconut;
 
 public class Palm extends Tree {
     public Palm() {
-        super(new Coconut());
+        super(Coconut.class);
     }
 }

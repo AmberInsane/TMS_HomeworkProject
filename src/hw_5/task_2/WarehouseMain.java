@@ -30,7 +30,7 @@ public class WarehouseMain {
         for (int i = 0; i < warehouse.getBoxes().length * 2; i++) {
             Box nextBox = warehouse.next();
             nextBox.setNumber("G-" + i);
-            if (i%2 == 1 && i < warehouse.getBoxes().length){
+            if (i % 2 == 1 && i < warehouse.getBoxes().length) {
                 warehouse.getBoxes()[i] = new Box("G-10", 11, 11);
             }
             System.out.println(nextBox);
