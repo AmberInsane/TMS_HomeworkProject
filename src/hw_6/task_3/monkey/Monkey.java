@@ -4,6 +4,7 @@ public class Monkey {
     private String[] knownFruits;
     private String name;
 
+    // смущает String[] knownFruits, а не Fruits[] knownFruits
     public Monkey(String name, String[] knownFruits) {
         this.name = name;
         this.knownFruits = knownFruits;
