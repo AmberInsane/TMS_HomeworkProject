@@ -7,21 +7,22 @@ package hw_6.task_2;
 Когда машина едет, то пускай выведет на экран текущую скорость
  */
 public class Car {
-    private boolean isWork = false;
+    private boolean isWork = false; // false будет по умолчанию
     private Transmission transmission;
     private Engine engine;
 
+    // Engine, Transmission - аргументами в конструктор
     public Car() {
         this.engine = new Engine();
         this.transmission = new Transmission();
     }
 
     public boolean isWork() {
-        return isWork;
+        return isWork; // this.engine.isWork()
     }
 
     public void turnOff() {
-        isWork = false;
+        isWork = false; // this.engine.turnOff()
     }
 
     public Transmission getTransmission() {
@@ -41,6 +42,8 @@ public class Car {
         }
     }
 
+    // я бы не проверял здесь работу мотора, достаточно запросить передачу, тогда весь метод будет
+    // return transmission.getGear() * 20; 
     public int getCurrentSpeed() {
         int currentSpeed = 0;
         if (isWork) {
