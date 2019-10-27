@@ -3,6 +3,7 @@ package hw_6.task_2;
 import java.util.Scanner;
 
 public class CarController {
+    // + static final
     private String errorMessage = "Please, put in correct number of command";
 
     private Car car;
@@ -38,6 +39,7 @@ public class CarController {
     }
 
     private void commandAction(int commandNumber) {
+        // в case очень накрученная логика или упрощай или выноси в отдельный метод
         switch (commandNumber) {
             case (1):
                 car.getEngine().turnOn();
