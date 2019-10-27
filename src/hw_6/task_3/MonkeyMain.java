@@ -21,6 +21,8 @@ import java.util.Scanner;
 Есть 3 обезьяны, одна умеет считать кокосы, вторая бананы, а третья - и кокосы и бананы (типо умная)
 Есть класс - MonkeyManager, в котором есть метод - попросить любую обезьяну посчитать фрукты на любом дереве
  */
+
+// в целом гуд
 public class MonkeyMain {
     public static void main(String[] args) {
         System.out.println("Hello! Let's do monkey business!");
@@ -96,7 +98,6 @@ public class MonkeyMain {
         }
     }
 
-    // countFruits должен быть у MonkeyManager
     private static int countFruits(Monkey monkey, Branch branch) {
         int fruitsNumber = 0;
         for (Branch tempBranch : branch.getBrunches()) {
