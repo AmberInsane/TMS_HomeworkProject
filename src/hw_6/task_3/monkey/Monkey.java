@@ -1,5 +1,6 @@
 package hw_6.task_3.monkey;
 
+// по идее у обезьян может быть метод который принимает дерево, а она считает фрукты на нем
 public class Monkey {
     private String[] knownFruits;
     private String name;
