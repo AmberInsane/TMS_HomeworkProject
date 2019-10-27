@@ -12,6 +12,7 @@ public class Branch {
         fruits = new Fruit[0];
     }
 
+    // brunches передала аргументом, а почему fruits нет?
     public Branch(ArrayList<Branch> brunches) {
         this.brunches = brunches;
         this.fruits = new Fruit[(int) (Math.random() * 10)];
