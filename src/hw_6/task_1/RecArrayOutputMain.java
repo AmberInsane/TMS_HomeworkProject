@@ -6,6 +6,7 @@ public class RecArrayOutputMain {
         recursionOutput(array, 0);
     }
 
+    // думаю этот метод может быть void, 
     private static int recursionOutput(int[] array, int index) {
         System.out.print(array[index] + "\t");
         index++;
@@ -14,4 +15,14 @@ public class RecArrayOutputMain {
         }
         return index;
     }
+    
+    /*
+    так проще 
+    private static void recursionOutput(int[] array, int index) {
+        if(index < array.length) {
+        System.out.print(array[index] + "\t");
+        recursionOutput(array, index+1)
+        }
+    }
+    */
 }
