@@ -73,6 +73,7 @@ public class MonkeyMain {
         int commandNumber = 0;
         showMenu(monkeys);
 
+        // тело этого цикла стоит дробить на методы
         while (commandNumber != -1) {
             try {
                 commandNumber = in.nextInt();
@@ -95,6 +96,7 @@ public class MonkeyMain {
         }
     }
 
+    // countFruits должен быть у MonkeyManager
     private static int countFruits(Monkey monkey, Branch branch) {
         int fruitsNumber = 0;
         for (Branch tempBranch : branch.getBrunches()) {
