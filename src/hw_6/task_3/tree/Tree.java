@@ -3,7 +3,9 @@ package hw_6.task_3.tree;
 import hw_6.task_3.fruit.Fruit;
 
 public class Tree {
+    // private? protected?
     Branch trunk;
+    // private? protected?
     Class<? extends Fruit> fruitClass;
 
     public Tree(Class<? extends Fruit> fruitClass) {
@@ -19,6 +21,7 @@ public class Tree {
         return fruitClass;
     }
 
+    // метод toString() всегда идет в конце
     @Override
     public String toString() {
         return printBrunch(trunk, 0).toString();
