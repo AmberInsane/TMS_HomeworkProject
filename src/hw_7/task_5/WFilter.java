@@ -6,20 +6,19 @@ import java.util.Arrays;
 public class WFilter {
     public static void main(String[] args) {
         String[] strings = new String[]{"hdfjksf", "dsfsf", "awwqwas", "wsfdsfsdf", "weqqqwewq"};
-        int counter = 0;
+        int wordCounter = 0;
         for (String string: strings) {
             if (string.toLowerCase().startsWith("w")) {
-                counter++;
+                wordCounter++;
             }
         }
-        String[] filteredStrings = new String[counter];
-        counter = 0;
+        String[] filteredStrings = new String[wordCounter];
+        wordCounter = 0;
         for (String string: strings) {
             if (string.toLowerCase().startsWith("w")) {
-                filteredStrings[counter++] = string;
+                filteredStrings[wordCounter++] = string;
             }
         }
-
         System.out.println(Arrays.toString(filteredStrings));
     }
 
