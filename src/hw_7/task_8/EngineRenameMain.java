@@ -15,9 +15,11 @@ public class EngineRenameMain {
         System.out.println(Arrays.toString(cars));
 
         for (int i = 0; i < cars.length; i++) {
+            // 1.4, 2.0T - в переменные
             if (cars[i].getEngine().getVolume() == 1.4) {
                 cars[i].getEngine().setName("2.0Т");
             }
+                        // 1.8, 1.8T - в переменные
             if (cars[i].getEngine().getVolume() == 1.8) {
                 cars[i].getEngine().setName("1.8Т");
             }
