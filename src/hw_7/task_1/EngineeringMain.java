@@ -1,5 +1,6 @@
 package hw_7.task_1;
 //Игра в слова. Есть строка “engineering”. Нужно выделить подстроку так, чтобы получилось два слова “engine” и “ring”.
+// +
 public class EngineeringMain {
     public static void main(String[] args) {
         String engineering = "engineering";
