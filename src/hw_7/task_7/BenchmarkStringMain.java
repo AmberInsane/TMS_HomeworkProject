@@ -3,6 +3,7 @@ package hw_7.task_7;
 Написать benchmark тест, который бы измерял скорость работы String, StringBuilder и StringBuffer.
  */
 
+// старайся разбивать не методы
 public class BenchmarkStringMain {
     public static void main(String[] args) {
         int counter = 100000;
