@@ -3,6 +3,7 @@ package hw_7.task_6;
 import java.util.Arrays;
 
 //Есть массив слов. Нужно отфильтровать его так, чтобы в выходном массиве оказались слова, которые начинаются с буквы “W”/”w”.
+// +
 public class WFilter {
     public static void main(String[] args) {
         String[] strings = new String[]{"hdfjksf", "dsfsf", "awwqwas", "wsfdsfsdf", "weqqqwewq"};
