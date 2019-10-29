@@ -1,4 +1,4 @@
-package hw_7.task_6;
+package hw_7.task_7;
 /*
 Написать benchmark тест, который бы измерял скорость работы String, StringBuilder и StringBuffer.
  */
