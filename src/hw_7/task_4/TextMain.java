@@ -9,9 +9,11 @@ public class TextMain {
                 "from larger crowd that come from various gaming backgrounds.\n" +
                 "Plan is to make the game as good as possible but without compromising the core idea.";
         String lowerText = text.toLowerCase();
+        // String[] findWords = {"alert", "add", "good", "plan"};
         String[] findWords = new String[]{"alert", "add", "good", "plan"};
         int counter;
         for (String findWord : findWords) {
+            // с точки зрения идеи оч круто, но читается так себе, думаю поможет если разбить на методы
             counter = (lowerText.length() - lowerText.replace(findWord, "").length()) / findWord.length();
             System.out.println(findWord + " - " + counter);
         }
