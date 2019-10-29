@@ -10,6 +10,7 @@ public class StringLengthMain {
         strings[4] = "Azaza";
 
         for (String string : strings) {
+            // 5 в переменную
             if (string.length() > 5) {
                 System.out.println(string);
             }
