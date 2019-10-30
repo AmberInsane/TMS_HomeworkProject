@@ -1,5 +1,6 @@
 package hw_8.task_3;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayExceptionMain {
@@ -12,10 +13,18 @@ public class ArrayExceptionMain {
             System.out.println("Put in size of array, please");
             string = scanner.next();
             int arraySize = Integer.parseInt(string);
-            if (arraySize > 10) {
+            if (arraySize > MAX_ARRAY_SIZE) {
                 throw new MyArraySizeException("TOO BIG!!!");
             }
-            System.out.print(arraySize + " is great size of array. Nice work!");
+            System.out.println(arraySize + " is great size of array. Nice work!");
+
+            int[] array = new int[arraySize];
+            for (int i = 0; i < array.length; i++) {
+                array[i] = (int) (Math.random() * 10);
+            }
+
+            System.out.println("Let me show you random array of your favorite size");
+            System.out.println(Arrays.toString(array));
         } catch (NumberFormatException e) {
             System.err.print("Put in correct integer next time, please");
         } catch (MyArraySizeException e) {
