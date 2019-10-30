@@ -5,8 +5,11 @@ public class WashingMachine {
         try {
             while (true) {
                 System.out.println("I'm working");
-                if (System.currentTimeMillis() % 3 == 1) {
+                if (System.currentTimeMillis() % 5 == 1) {
                     throw new WashingMachineException("Oh, no!");
+                }
+                if (System.currentTimeMillis() % 5 == 2) {
+                    break;
                 }
             }
         } catch (WashingMachineException e) {
