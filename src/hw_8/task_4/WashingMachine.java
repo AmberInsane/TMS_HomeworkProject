@@ -1,8 +1,10 @@
 package hw_8.task_4;
 
+// +
 public class WashingMachine {
     public void work() {
         try {
+            // while (true) я бы лучше сделал поле isWorking и метод, по которому можно было бы проверить работает или нет
             while (true) {
                 System.out.println("I'm working");
                 if (System.currentTimeMillis() % 5 == 1) {
