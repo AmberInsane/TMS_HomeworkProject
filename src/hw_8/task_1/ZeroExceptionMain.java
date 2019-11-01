@@ -7,6 +7,7 @@ import java.util.Scanner;
 Создать метод, который бы делил одно число на другое, обработать исключение при делении на 0.
 И вывести пользователю сообщение о том, что на 0 делить нельзя
  */
+// цикла не хватает, чтобы можно было ввести заново
 public class ZeroExceptionMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
