@@ -11,7 +11,8 @@ public class ArrayExceptionMain {
         try {
             String string;
             System.out.println("Put in size of array, please");
-            string = scanner.next();
+            string = scanner.next(); // scanner.nextInt()
+            // а если пользователь введет отрицательное число?
             int arraySize = Integer.parseInt(string);
             if (arraySize > MAX_ARRAY_SIZE) {
                 throw new MyArraySizeException("TOO BIG!!!");
