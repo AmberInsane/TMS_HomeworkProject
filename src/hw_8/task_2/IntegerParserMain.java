@@ -11,6 +11,7 @@ public class IntegerParserMain {
         try {
             String string;
             System.out.println("Put in number, please");
+            // String string = scanner.next(); а лучше вынести за пределы try-catch и показывать пользователю что он ввел в блоке catch
             string = scanner.next();
             int number = Integer.parseInt(string);
             System.out.print(number + " is nice integer");
