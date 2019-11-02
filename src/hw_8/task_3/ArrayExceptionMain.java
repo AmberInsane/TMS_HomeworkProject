@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class ArrayExceptionMain {
     private static final int MAX_ARRAY_SIZE = 10;
+    private static final int MIN_ARRAY_SIZE = 1;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -12,10 +13,13 @@ public class ArrayExceptionMain {
             String string;
             System.out.println("Put in size of array, please");
             string = scanner.next(); // scanner.nextInt()
-            // а если пользователь введет отрицательное число?
+            // а если пользователь введет отрицательное число? - готово
             int arraySize = Integer.parseInt(string);
             if (arraySize > MAX_ARRAY_SIZE) {
                 throw new MyArraySizeException("TOO BIG!!!");
+            }
+            if (arraySize < MIN_ARRAY_SIZE) {
+                throw new MyArraySizeException("TOO SMALL!!!");
             }
             System.out.println(arraySize + " is great size of array. Nice work!");
 
