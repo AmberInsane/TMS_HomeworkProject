@@ -12,7 +12,7 @@ public class TextFileWriter {
         try {
             File file = new File(FILE_PATH);
             if (!file.exists() && !file.createNewFile()) {
-                    throw new IOException();
+                throw new IOException();
             }
             try (FileWriter fw = new FileWriter(FILE_PATH)) {
                 String text = "Hello, Hell";
