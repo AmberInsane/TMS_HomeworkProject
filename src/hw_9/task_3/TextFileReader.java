@@ -3,6 +3,7 @@ package hw_9.task_3;
 import java.io.*;
 
 //Прочитать файл из Task_2 и вывести на экран содержимое
+// +
 public class TextFileReader {
     private static final String FILE_PATH = "src/hw_9/task_2/Text10000";
 
