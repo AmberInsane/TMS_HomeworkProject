@@ -8,11 +8,17 @@ public class IntArrayToFile {
     private static final String FILE_PATH = "src/hw_9/task_1/Int Array";
 
     public static void main(String[] args) {
+        // я думаю лучше было бы сделать один try-catch, а не вкладывать один в другой
         try {
             File file = new File(FILE_PATH);
             if (!file.exists() && !file.createNewFile()) {
                 throw new IOException();
             }
+            /*
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            */
             int[] array = new int[10];
             for (int i = 0; i < array.length; i++) {
                 array[i] = (int) (Math.random() * 100);
