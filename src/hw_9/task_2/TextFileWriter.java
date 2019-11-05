@@ -9,9 +9,10 @@ public class TextFileWriter {
     private static final String FILE_PATH = "src/hw_9/task_2/Text10000";
 
     public static void main(String[] args) {
+        // как и в Таск_1 лучше сделать общий try-catch без вложенности
         try {
             File file = new File(FILE_PATH);
-            if (!file.exists() && !file.createNewFile()) {
+            if (!file.exists() && !file.createNewFile()) { // смотри Таск_1
                 throw new IOException();
             }
             try (FileWriter fw = new FileWriter(FILE_PATH)) {
