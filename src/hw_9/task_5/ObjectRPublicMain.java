@@ -14,7 +14,7 @@ public class ObjectRPublicMain {
     public static void main(String[] args) {
         try {
             File file = new File(FILE_PATH);
-            if (!file.exists() && !file.createNewFile()) {
+            if (!file.exists() && !file.createNewFile()) { // Task_1
                 throw new IOException();
             }
             readEmployeeFromFile(file);
@@ -23,6 +23,7 @@ public class ObjectRPublicMain {
         }
     }
 
+    // void -> Employee
     private static void readEmployeeFromFile(File file) {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
             Employee employee = (Employee) ois.readObject();

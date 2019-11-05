@@ -3,6 +3,7 @@ package hw_9.task_7;
 import java.io.File;
 
 //Написать функцию, которая бы обходила весь каталог (включая вложенные папки и  файлы) и печатала бы на экран структуру
+// +
 public class FolderTraversalMain {
     private static final String FILE_PATH = "src";
 

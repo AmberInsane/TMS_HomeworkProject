@@ -3,6 +3,7 @@ package hw_9.task_4;
 import java.io.Serializable;
 
 //У Employee есть имя, возраст и работа (work)
+// +
 public class Employee implements Serializable {
     private static final long serialVersionUID = 8899520090505034685L;
     private String name;

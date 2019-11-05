@@ -11,7 +11,7 @@ public class ObjectWRMain {
     public static void main(String[] args) {
         try {
             File file = new File(FILE_PATH);
-            if (!file.exists() && !file.createNewFile()) {
+            if (!file.exists() && !file.createNewFile()) { // Task_1
                 throw new IOException();
             }
             Employee employeeJohn = new Employee("John", 33, new Work("Delivery guy"));
