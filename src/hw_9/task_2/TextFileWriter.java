@@ -9,25 +9,21 @@ public class TextFileWriter {
     private static final String FILE_PATH = "src/hw_9/task_2/Text10000";
 
     public static void main(String[] args) {
-        // как и в Таск_1 лучше сделать общий try-catch без вложенности
-        try {
+        // как и в Таск_1 лучше сделать общий try-catch без вложенности (готово)
+        try (FileWriter fw = new FileWriter(FILE_PATH)) {
             File file = new File(FILE_PATH);
-            if (!file.exists() && !file.createNewFile()) { // смотри Таск_1
+            if (!file.exists() && !file.createNewFile()) {
                 throw new IOException();
             }
-            try (FileWriter fw = new FileWriter(FILE_PATH)) {
-                String text = "Hello, Hell";
-                int n = 10000;
-                for (int i = 0; i < n; i++) {
-                    fw.append(text);
-                    fw.append("\n");
-                }
-                fw.flush();
-            } catch (IOException e) {
-                System.err.println("Problem with putting in file");
+            String text = "Hello, Hell";
+            int n = 10000;
+            for (int i = 0; i < n; i++) {
+                fw.append(text);
+                fw.append("\n");
             }
+            fw.flush();
         } catch (IOException e) {
-            System.err.println("Problem with creating file");
+            System.err.println("Problem with file: " + e.getMessage());
         }
     }
 }

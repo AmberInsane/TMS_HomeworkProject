@@ -4,28 +4,25 @@ import java.io.*;
 
 public class WriteSecretMessage {
     private static final String FILE_PATH = "src/hw_9/task_6/imj.jpeg";
-
-    // final.            secret -> SECRET
-    private static String secret = "42 is the Answer to the Ultimate Question of Life, the Universe, and Everything";
+    private static final String KEY_FILE_PATH = "src/hw_9/task_6/key";
+    private final static String SECRET = "42 is the Answer to the Ultimate Question of Life, the Universe, and Everything";
 
     public static void main(String[] args) {
-        try {
-            File file = new File(FILE_PATH);
-            if (!file.exists() && !file.createNewFile()) { // Task_1
-                throw new IOException();
-            }
-            writeSecretToFile(secret, file);
-        } catch (IOException e) {
-            System.err.println("Problem with creating file: " + e.getMessage());
-        }
+        File file = new File(FILE_PATH);
+        writeSecretToFile(SECRET, file);
     }
 
-    private static void writeSecretToFile(String secret, File file){ // вроде не отформатирован код?
-        try (FileOutputStream fos = new FileOutputStream(file, true)){
-            fos.write(("\n" + secret).getBytes());
-            fos.flush();
-        } catch (Exception e) {
-            System.err.println("Problem with output stream: " + e.getMessage());
+    private static void writeSecretToFile(String secret, File file) {
+        try (RandomAccessFile raf = new RandomAccessFile(file, "rw");
+             FileOutputStream fos = new FileOutputStream(KEY_FILE_PATH)) {
+            long secretLength = secret.length();
+            long startPosition = (long) (file.length() * Math.random());
+            fos.write(Long.toString(startPosition).getBytes());
+            fos.write(("\n" + secretLength).getBytes());
+            raf.seek(startPosition);
+            raf.write(secret.getBytes());
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
         }
     }
 }
