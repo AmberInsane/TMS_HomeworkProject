@@ -15,7 +15,7 @@ public enum FileRenameStrategy {
         @Override
         public String getNewFileName(File file) {
             String fileName = file.getName();
-            fileName = fileName.substring(1,1).toUpperCase() + fileName.substring(2).toLowerCase();
+            fileName = fileName.substring(0, 1).toUpperCase() + fileName.substring(1).toLowerCase();
             return fileName;
         }
     },
@@ -31,6 +31,6 @@ public enum FileRenameStrategy {
     public abstract String getNewFileName(File file);
 
     public boolean renameFile(File file) {
-        return file.renameTo(new File(getNewFileName(file)));
+        return file.renameTo(new File(file.getParentFile().getAbsolutePath() + "\\" + getNewFileName(file)));
     }
 }
