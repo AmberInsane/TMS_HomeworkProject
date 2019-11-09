@@ -3,6 +3,7 @@ package hw_9.task_4;
 import java.io.Serializable;
 
 // У Work есть атрибуты название и минимальный стаж.
+// +
 public class Work implements Serializable {
     private String name;
     private int minExperience;
