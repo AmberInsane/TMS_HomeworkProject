@@ -16,7 +16,7 @@ public class GarageMain {
         Garage<Lada> onlyLadaGarage = new Garage<>("Ololo st., 33");
 
         for (Car car : cars) {
-            allCarsGarage.getCars().add(car);
+            allCarsGarage.getCars().add(car); // allCarsGarage.getCars().addAll(cars) за пределами цикла 
             if (car instanceof BMW) {
                 onlyBMWGarage.getCars().add((BMW) car);
             }
