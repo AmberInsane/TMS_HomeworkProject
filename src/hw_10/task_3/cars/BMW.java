@@ -1,7 +1,8 @@
 package hw_10.task_3.cars;
 
-import java.awt.*; // этот импорт точно нужен?
+import java.awt.*; 
 
+// +
 public class BMW extends Car {
     public BMW(long vinNumber, short year, Color color) {
         super(vinNumber, year, color);
