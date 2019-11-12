@@ -17,12 +17,14 @@ public class FileRenameMain {
         File[] dirFiles = dir.listFiles();
         Scanner scanner;
         boolean isCorrectInput;
-        for (File file : dirFiles != null ? dirFiles : new File[0]) {
+        
+        // этот огромный for стоит разбить на несколько методов
+        for (File file : dirFiles != null ? dirFiles : new File[0]) { // этот код очень плохо читается, не стоит так писать
             System.out.println("What should I do with file " + file.getName() + "?");
             printMenu();
-            scanner = new Scanner(System.in);
+            scanner = new Scanner(System.in); // в каждой итерации цика новый Scanner не стоит создавать
             isCorrectInput = false;
-            while (!isCorrectInput) {
+            while (!isCorrectInput) { // думаю этот цикл лишний и можно без него
                 try {
                     FileRenameStrategy enumApple = FileRenameStrategy.valueOf(scanner.next());
                     isCorrectInput = true;
@@ -33,7 +35,7 @@ public class FileRenameMain {
                     }
                 } catch (IllegalArgumentException e) {
                     System.err.println("Incorrect input");
-                    scanner = new Scanner(System.in);
+                    scanner = new Scanner(System.in); // здесь точно не нужно создавать новый сканнер
                 }
             }
         }
@@ -42,7 +44,7 @@ public class FileRenameMain {
     private static void printMenu() {
         FileRenameStrategy[] values = FileRenameStrategy.values();
         for (FileRenameStrategy value : values) {
-            System.out.println(value.toString());
+            System.out.println(value.toString()); // не нужно самому вызывать метод toString() он будет вызван автоматически
         }
     }
 }
