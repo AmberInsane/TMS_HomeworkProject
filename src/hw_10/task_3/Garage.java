@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class Garage<S extends Car> {
     private String address;
+    // ArrayList -> List, так лучше
     private ArrayList<S> cars;
 
     public Garage(String address) {
