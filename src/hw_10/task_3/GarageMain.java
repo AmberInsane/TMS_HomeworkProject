@@ -12,8 +12,8 @@ public class GarageMain {
                 new BMW(586899069865L, (short) 2000, Color.BLUE)};
 
         Garage<Car> allCarsGarage = new Garage<>("Ololo st., 29");
-        Garage<BMW> onlyBMWGarage = new Garage<>("Ololo st., 30", new ArrayList<>());
-        Garage<Lada> onlyLadaGarage = new Garage<>("Ololo st., 33", new ArrayList<>());
+        Garage<BMW> onlyBMWGarage = new Garage<>("Ololo st., 30");
+        Garage<Lada> onlyLadaGarage = new Garage<>("Ololo st., 33");
 
         for (Car car : cars) {
             allCarsGarage.getCars().add(car);
