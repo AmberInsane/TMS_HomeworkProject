@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+//Вход на вечеринку только по списку.
+//Есть список имен (коллекция). Пользователь вводит с консоли свое имя, а программа проверяет его наличие в списке,
+//после чего говорит может он пройти или нет
 public class PartyMain {
     private static final String STOP_WORD = "stop";
 
