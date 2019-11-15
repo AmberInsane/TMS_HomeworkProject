@@ -29,7 +29,7 @@ public class BenchmarkDelMidListMain {
 
     private static long calcDelMidTime(List<Integer> list) {
         long startTime = System.currentTimeMillis();
-        for (int i = 0; i < LIST_SIZE; i++) {
+        while (list.size() > 0) {
             list.remove(list.size() / 2);
         }
         return System.currentTimeMillis() - startTime;

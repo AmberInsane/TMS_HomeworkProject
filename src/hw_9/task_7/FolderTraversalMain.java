@@ -21,10 +21,14 @@ public class FolderTraversalMain {
     }
 
     private static void folderTraversal(File file, int level) {
+        StringBuilder outPut = new StringBuilder();
+        for (int i = 0; i < level; i++) {
+            outPut.append("\t");
+        }
         if (file.isFile()) {
-            System.out.println("\t".repeat(level) + "File: " + file.getName());
+            System.out.println(outPut + "File: " + file.getName());
         } else {
-            System.out.println("\t".repeat(level) + "Directory: " + file.getName());
+            System.out.println(outPut + "Directory: " + file.getName());
             level++;
             for (File tempFile : file.listFiles()) {
                 folderTraversal(tempFile, level);
