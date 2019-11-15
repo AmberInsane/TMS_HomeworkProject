@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Есть две коллекции, нужно удалить из первой те, которые есть во второй
+
+// +
 public class BestGarfieldWeek {
     public static void main(String[] args) {
         List<String> daysOfWeek = new ArrayList<>();
@@ -22,7 +24,9 @@ public class BestGarfieldWeek {
         System.out.println(daysOfWeek);
         System.out.println("Garfield hates");
         System.out.println(garfieldHatesDays);
+        
         daysOfWeek.removeAll(garfieldHatesDays);
+        
         System.out.println("Perfect week for Garfield contains");
         System.out.println(daysOfWeek);
     }
