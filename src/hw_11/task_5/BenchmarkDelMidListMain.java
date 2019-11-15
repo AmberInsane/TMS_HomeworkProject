@@ -27,6 +27,7 @@ public class BenchmarkDelMidListMain {
         }
     }
 
+    // замени на while
     private static long calcDelMidTime(List<Integer> list) {
         long startTime = System.currentTimeMillis();
         while (list.size() > 0) {
