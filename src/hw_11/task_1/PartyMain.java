@@ -20,7 +20,7 @@ public class PartyMain {
         System.out.println("I can check in list. Stop word is " + STOP_WORD);
         String nameToFind = scanner.nextLine();
         while (!nameToFind.equals(STOP_WORD)) {
-            if (guestList.indexOf(nameToFind) >= 0) {
+            if (guestList.indexOf(nameToFind) >= 0) { // guestList.contains()
                 System.out.println("Yes, you are in list. Come in!");
             } else {
                 System.out.println("Sorry, I can't find " + nameToFind + " in list");
