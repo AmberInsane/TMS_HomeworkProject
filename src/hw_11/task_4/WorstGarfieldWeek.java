@@ -3,6 +3,7 @@ package hw_11.task_4;
 import java.util.ArrayList;
 import java.util.List;
 
+// +
 public class WorstGarfieldWeek {
     public static void main(String[] args) {
         List<String> daysOfWeek = new ArrayList<>();
@@ -21,7 +22,9 @@ public class WorstGarfieldWeek {
         System.out.println(daysOfWeek);
         System.out.println("Garfield hates");
         System.out.println(garfieldHatesDays);
+        
         daysOfWeek.retainAll(garfieldHatesDays);
+        
         System.out.println("The worst week for Garfield contains");
         System.out.println(daysOfWeek);
     }
