@@ -21,7 +21,7 @@ public class ArrayList100Main {
 
     private static void deleteEvenNumbers(List<Integer> integerList) {
         Iterator<Integer> iterator = integerList.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             if (iterator.next() % 2 == 0) {
                 iterator.remove();
             }

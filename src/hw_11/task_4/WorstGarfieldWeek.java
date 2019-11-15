@@ -15,7 +15,7 @@ public class WorstGarfieldWeek {
         daysOfWeek.add("Sunday");
 
         List<String> garfieldHatesDays = new ArrayList<>();
-        garfieldHatesDays.add("Monday") ;
+        garfieldHatesDays.add("Monday");
 
         System.out.println("Days of week");
         System.out.println(daysOfWeek);

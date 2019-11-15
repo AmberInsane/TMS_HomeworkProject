@@ -2,13 +2,22 @@ package hw_11.task_9;
 
 import java.util.Objects;
 
-public class Student implements Comparable {
+public class Student implements Comparable<Student> {
     private String name;
     private String groupName;
 
+    public Student(String name, String groupName) {
+        this.name = name;
+        this.groupName = groupName;
+    }
+
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public int compareTo(Student o) {
+        int result = this.name.compareTo(o.name);
+        if (result == 0) {
+            result = this.groupName.compareTo(o.groupName);
+        }
+        return result;
     }
 
     @Override
@@ -23,5 +32,13 @@ public class Student implements Comparable {
     @Override
     public int hashCode() {
         return Objects.hash(name, groupName);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", groupName='" + groupName + '\'' +
+                '}';
     }
 }
