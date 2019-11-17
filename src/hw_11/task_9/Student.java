@@ -2,6 +2,7 @@ package hw_11.task_9;
 
 import java.util.Objects;
 
+// +
 public class Student implements Comparable<Student> {
     private String name;
     private String groupName;
