@@ -7,6 +7,8 @@ import java.util.Set;
 //с одинаковым ID и названием и добавить их в ваш Set. Попробуйте разобраться почему они все добавились,
 //несмотря на то, что Set обеспечивает уникальность
 //потому что hashCode и equals не хватает - без них сравниваются ссылки
+
+// +
 public class ShopSetMain {
     public static void main(String[] args) {
         Set<Shop> shopSet = new HashSet<>();
