@@ -1,5 +1,6 @@
 package hw_11.task_10;
 
+// +
 public class Fruit {
     private String name;
     private Double weight;
