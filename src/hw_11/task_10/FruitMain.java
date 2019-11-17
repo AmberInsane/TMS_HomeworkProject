@@ -12,6 +12,7 @@ public class FruitMain {
         System.out.println(fruitSet);
 
         Map<String, Double> allFruitWeight = new HashMap<>();
+        //я бы не передавал allFruitWeight аргументом, а создавал ее внутри метода и вместо void возвращал
         calcAllFruitWeight(fruitSet, allFruitWeight);
         System.out.println(allFruitWeight);
     }
@@ -28,6 +29,7 @@ public class FruitMain {
     private static void calcAllFruitWeight(Set<Fruit> fruitSet, Map<String, Double> allFruitWeight) {
         for (Fruit fruit : fruitSet) {
             if (allFruitWeight.containsKey(fruit.getName())) {
+                // старайся избегать таких длинных строчек
                 allFruitWeight.put(fruit.getName(), allFruitWeight.get(fruit.getName()) + fruit.getWeight());
             } else {
                 allFruitWeight.put(fruit.getName(), fruit.getWeight());
