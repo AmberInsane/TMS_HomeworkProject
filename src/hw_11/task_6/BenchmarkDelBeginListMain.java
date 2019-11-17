@@ -30,7 +30,7 @@ public class BenchmarkDelBeginListMain {
     // замени на while, константа в таком цикле смотрится странно
     private static long calcDelBeginTime(List<Integer> list) {
         long startTime = System.currentTimeMillis();
-        for (int i = 0; i < LIST_SIZE; i++) {
+        while (!list.isEmpty()) {
             list.remove(0);
         }
         return System.currentTimeMillis() - startTime;
