@@ -5,19 +5,16 @@ import hw_12.task_4.User;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 
 public class ListUserRemMain {
     public static void main(String[] args) {
+        String pattern = "([APE])(.*)";
+        Predicate<String> filter = name -> name.matches(pattern);
+
         UnaryOperator<List<User>> userFilter = list -> {
-            Iterator<User> iterator = list.iterator();
-            String pattern = "([APE])(.*)";
-            while (iterator.hasNext()) {
-                User nextUser = iterator.next();
-                if (nextUser.getName().matches(pattern)) {
-                    iterator.remove();
-                }
-            }
+            list.removeIf(nextUser -> filter.test(nextUser.getName()));
             return list;
         };
 

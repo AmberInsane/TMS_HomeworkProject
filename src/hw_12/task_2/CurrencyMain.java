@@ -1,8 +1,10 @@
 package hw_12.task_2;
 
+import java.util.function.Function;
+
 public class CurrencyMain {
     public static void main(String[] args) {
-        CurrencyStringInterface printCurrencyString = x -> System.out.println(x.toString() + " рублей");
-        printCurrencyString.print(10);
+        Function<Integer, String> getCurrencyString = x -> x.toString() + " рублей";
+        System.out.println(getCurrencyString.apply(10));
     }
 }
