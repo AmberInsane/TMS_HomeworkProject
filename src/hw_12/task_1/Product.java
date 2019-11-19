@@ -10,6 +10,7 @@ public class Product {
     private String name;
     private LocalDateTime arriveTime;
 
+    // но время все же лучше передавать аргументом
     public Product(String name) {
         this.name = name;
         this.arriveTime = LocalDateTime.now();
