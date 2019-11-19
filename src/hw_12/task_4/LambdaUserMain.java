@@ -14,7 +14,7 @@ public class LambdaUserMain {
                 return new User(name);
             } else {
                 System.err.println("Put in correct name");
-                return null;
+                return null; // лучше эксепшн
             }
         };
 
