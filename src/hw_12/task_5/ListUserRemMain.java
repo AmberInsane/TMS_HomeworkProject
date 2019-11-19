@@ -13,6 +13,7 @@ public class ListUserRemMain {
         String pattern = "([APE])(.*)";
         Predicate<String> filter = name -> name.matches(pattern);
 
+        // думаю это хороший пример для использования Consumer
         UnaryOperator<List<User>> userFilter = list -> {
             list.removeIf(nextUser -> filter.test(nextUser.getName()));
             return list;
