@@ -19,6 +19,8 @@ public class SportsRunMain {
 
         RunConsumer runConsumer = (runName, listOfRunners) -> {
             listOfRunners.sort((a, b) -> b.getAvgSpeed().compareTo(a.getAvgSpeed()));
+            
+            // не стоит хардкодить индексы, вдруг лист будет из 1 элемента или вообще пустой
             listOfRunners.get(0).addGoal(runName, Reward.GOLD);
             listOfRunners.get(1).addGoal(runName, Reward.SILVER);
             listOfRunners.get(2).addGoal(runName, Reward.BRONZE);
