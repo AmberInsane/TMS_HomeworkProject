@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+// +
 public class ReversSortMain {
     public static void main(String[] args) {
         List<String> strings = new ArrayList<>();
