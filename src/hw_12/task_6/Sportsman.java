@@ -3,6 +3,7 @@ package hw_12.task_6;
 import java.util.Map;
 import java.util.TreeMap;
 
+// +
 public class Sportsman {
     private String name;
     private Double avgSpeed;
