@@ -3,6 +3,7 @@ package hw_12.task_1;
 import java.util.HashSet;
 import java.util.Set;
 
+// +
 public class ProductMain {
     public static void main(String[] args) throws InterruptedException {
         Set<Product> products = new HashSet<>();
