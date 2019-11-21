@@ -16,6 +16,11 @@ public class MinLenMain {
         stringList.add("Privet");
 
         Optional<String> maxStr = stringList.stream().max(Comparator.naturalOrder());
-        System.out.println("The longest string is " + maxStr.get());
+
+        if (maxStr.isPresent()) {
+            System.out.println("The longest string is " + maxStr.get());
+        } else {
+            System.out.println("No strings found");
+        }
     }
 }
