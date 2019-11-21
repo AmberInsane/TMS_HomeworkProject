@@ -5,6 +5,7 @@ import hw_12.task_4.User;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 
@@ -14,10 +15,15 @@ public class ListUserRemMain {
         Predicate<String> filter = name -> name.matches(pattern);
 
         // думаю это хороший пример для использования Consumer
-        UnaryOperator<List<User>> userFilter = list -> {
+       /* UnaryOperator<List<User>> userFilter = list -> {
             list.removeIf(nextUser -> filter.test(nextUser.getName()));
             return list;
+        };*/
+
+        Consumer<List<User>> userFilter = list -> {
+            list.removeIf(nextUser -> filter.test(nextUser.getName()));
         };
+
 
         List<User> userList = new ArrayList<>();
         userList.add(new User("Ann"));
@@ -28,6 +34,7 @@ public class ListUserRemMain {
         userList.add(new User("Elizabeths"));
 
         System.out.println(userList);
-        System.out.println(userFilter.apply(userList));
+        userFilter.accept(userList);
+        System.out.println(userList);
     }
 }

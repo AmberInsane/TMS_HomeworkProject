@@ -4,7 +4,7 @@ import java.util.function.Function;
 
 public class CurrencyMain {
     public static void main(String[] args) {
-        Function<Integer, String> getCurrencyString = x -> x.toString() + " рублей"; // думаю окончание может меняться, сократи
+        Function<Integer, String> getCurrencyString = x -> x.toString() + " USD"; // думаю окончание может меняться, сократи
         System.out.println(getCurrencyString.apply(10));
     }
 }

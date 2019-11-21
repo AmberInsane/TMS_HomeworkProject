@@ -6,19 +6,23 @@ import java.util.regex.Pattern;
 
 public class LambdaUserMain {
     public static void main(String[] args) {
-        Supplier<User> newUser = () -> {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Put in student's name");
-            String name = scanner.nextLine();
-            if (name.matches("[a-zA-Z]+")) {
-                return new User(name);
-            } else {
-                System.err.println("Put in correct name");
-                return null; // лучше эксепшн
-            }
-        };
+        try {
+            Supplier<User> newUser = () -> {
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Put in student's name");
+                String name = scanner.nextLine();
+                if (name.matches("[a-zA-Z]+")) {
+                    return new User(name);
+                } else {
+                    //return null; // лучше эксепшн
+                    throw new IllegalArgumentException("Incorrect input name");
+                }
+            };
 
-        User user = newUser.get();
-        System.out.println(user);
+            User user = newUser.get();
+            System.out.println(user);
+        } catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+        }
     }
 }

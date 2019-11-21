@@ -19,11 +19,29 @@ public class SportsRunMain {
 
         RunConsumer runConsumer = (runName, listOfRunners) -> {
             listOfRunners.sort((a, b) -> b.getAvgSpeed().compareTo(a.getAvgSpeed()));
-            
+
             // не стоит хардкодить индексы, вдруг лист будет из 1 элемента или вообще пустой
-            listOfRunners.get(0).addGoal(runName, Reward.GOLD);
+            /*listOfRunners.get(0).addGoal(runName, Reward.GOLD);
             listOfRunners.get(1).addGoal(runName, Reward.SILVER);
-            listOfRunners.get(2).addGoal(runName, Reward.BRONZE);
+            listOfRunners.get(2).addGoal(runName, Reward.BRONZE);*/
+
+            int place = 0;
+            Iterator<Sportsman> listIterator = listOfRunners.iterator();
+
+            while (listIterator.hasNext() && (place < Reward.values().length)) {
+                place++;
+                switch (place) {
+                    case 1:
+                        listIterator.next().addGoal(runName, Reward.GOLD);
+                        break;
+                    case 2:
+                        listIterator.next().addGoal(runName, Reward.SILVER);
+                        break;
+                    case 3:
+                        listIterator.next().addGoal(runName, Reward.BRONZE);
+                        break;
+                }
+            }
         };
 
         System.out.println("The first run");
