@@ -26,6 +26,10 @@ public class First22NumberMain {
                 .filter(x -> x > minInt)
                 .findFirst();
 
+        /*
+        у тебя firstNum будет или со значением или Optional.empty, проверка не нужна
+        return firstNum;
+        */
         if (firstNum.isEmpty()) {
             return Optional.empty();
         }
