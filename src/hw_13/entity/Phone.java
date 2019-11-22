@@ -2,6 +2,7 @@ package hw_13.entity;
 
 import java.util.Objects;
 
+// +
 public class Phone {
     private String model;
     private String producer;
