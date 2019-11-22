@@ -14,8 +14,9 @@ public class MinLenMain {
         stringList.add("Hello");
         stringList.add("Hi");
         stringList.add("Privet");
+        stringList.add("ZZZZZ");
 
-        Optional<String> maxStr = stringList.stream().max(Comparator.naturalOrder());
+        Optional<String> maxStr = stringList.stream().max(Comparator.comparingInt(String::length));
 
         if (maxStr.isPresent()) {
             System.out.println("The longest string is " + maxStr.get());
