@@ -24,6 +24,7 @@ public class PhoneProducerFilter {
 
         List<String> phonesToFind = Arrays.asList("Apple", "Samsung", "Xiaomi");
 
+        // find -> found -> found :)
         List<String> foundedProducers = phones.stream()
                 .map(Phone::getProducer)
                 .filter(phonesToFind::contains)
