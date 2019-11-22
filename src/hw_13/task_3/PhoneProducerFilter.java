@@ -11,6 +11,8 @@ import java.util.stream.Collectors;
 //Task 3 (map + filter)
 //Есть коллекция телефонов. Необходимо получить из нее коллекцию производителей (производитель - это строка) и оставить только те, которые входят в список:
 // Apple, Samsung, Xiaomi
+
+// +
 public class PhoneProducerFilter {
     public static void main(String[] args) {
         List<Phone> phones = new ArrayList<>();
