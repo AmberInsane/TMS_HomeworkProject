@@ -11,6 +11,10 @@ public class Sum5Main {
         List<Integer> integerList = Arrays.asList(1, 5, 12, 23, 324);
 
         int limitNum = 5;
+        /*
+проверять на макс число элементов не обязательно (только если сама хлочешь),
+если коллекция будет меньше, чем число в limit() то будет использована вся коллекция без ограничений
+        */
         if (integerList.size() < limitNum) {
             System.err.println("There is no " + limitNum + " elements");
         } else {
