@@ -7,6 +7,8 @@ import java.util.Optional;
 
 //Task 2 (max, String::compareTo / Comparator.naturalOrder())
 //Есть коллекция строк, нужно найти строку с максимальной длинной.
+
+//+
 public class MinLenMain {
     public static void main(String[] args) {
         List<String> stringList = new ArrayList<>();
