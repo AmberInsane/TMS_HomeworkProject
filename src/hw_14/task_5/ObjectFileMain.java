@@ -4,12 +4,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 public class ObjectFileMain {
-
 
     public static void main(String[] args) {
         String folderPath = "src/hw_14/task_5/cats";
@@ -46,7 +42,7 @@ public class ObjectFileMain {
 
         int counter = 0;
         for (Cat cat : cats) {
-            File file = new File(folderPath + "/cat" +counter++);
+            File file = new File(folderPath + "/cat" + counter++);
             catFileWriter.writeCatToFile(cat, file);
         }
 
@@ -54,12 +50,11 @@ public class ObjectFileMain {
         File[] files = folder.listFiles();
         List<Cat> catsFromFiles = new ArrayList<>();
 
-        for (File file: files) {
+        for (File file : files) {
             catsFromFiles.add(catFileRider.readCatFromFile(file));
         }
 
         System.out.println("Cats after serialization");
         System.out.println(catsFromFiles);
-
     }
 }
