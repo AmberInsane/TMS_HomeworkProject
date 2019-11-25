@@ -6,10 +6,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ObjectFileMain {
+    private static String FILE_PATH = "src/hw_14/task_5/cat";
 
     public static void main(String[] args) {
-        String folderPath = "src/hw_14/task_5/cats";
-
         List<Cat> cats = new LinkedList<>() {{
             add(new Cat("Sheldon"));
             add(new Cat("Tormund"));
@@ -20,41 +19,19 @@ public class ObjectFileMain {
         System.out.println("Cats before serialization");
         System.out.println(cats);
 
-        CatFileWriter catFileWriter = (cat, file) -> {
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
-                oos.writeObject(cat);
-                oos.flush();
-            } catch (IOException e) {
-                System.err.println(e.getMessage());
-            }
-        };
+        File file = new File(FILE_PATH);
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
+             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
+            oos.writeObject(cats);
+            oos.flush();
 
-        CatFileRider catFileRider = (file) -> {
-            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
-                return (Cat) ois.readObject();
-            } catch (IOException e) {
-                System.err.println("IOException " + e.getMessage());
-            } catch (ClassNotFoundException e) {
-                System.err.println("ClassNotFoundException " + e.getMessage());
-            }
-            return null;
-        };
-
-        int counter = 0;
-        for (Cat cat : cats) {
-            File file = new File(folderPath + "/cat" + counter++);
-            catFileWriter.writeCatToFile(cat, file);
+            List<Cat> catsFromFiles = new ArrayList<>((List<Cat>) ois.readObject());
+            System.out.println("Cats after serialization");
+            System.out.println(catsFromFiles);
+        } catch (IOException e) {
+            System.err.println("IOException " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            System.err.println("ClassNotFoundException " + e.getMessage());
         }
-
-        File folder = new File(folderPath);
-        File[] files = folder.listFiles();
-        List<Cat> catsFromFiles = new ArrayList<>();
-
-        for (File file : files) {
-            catsFromFiles.add(catFileRider.readCatFromFile(file));
-        }
-
-        System.out.println("Cats after serialization");
-        System.out.println(catsFromFiles);
     }
 }
