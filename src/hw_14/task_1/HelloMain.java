@@ -2,6 +2,7 @@ package hw_14.task_1;
 
 import java.util.Scanner;
 
+// +
 public class HelloMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
