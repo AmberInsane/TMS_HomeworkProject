@@ -11,6 +11,7 @@ public class Man {
     private String surName;
     private String telephoneNum;
 
+    // 3 конструктора
     public Man(String name, String param, String... args) {
         this.name = name;
         if (args.length > 0) {
