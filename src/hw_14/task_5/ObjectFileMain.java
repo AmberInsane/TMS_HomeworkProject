@@ -20,6 +20,7 @@ public class ObjectFileMain {
         System.out.println(cats);
 
         File file = new File(FILE_PATH);
+        // пора уже чтение и запись выносить в отдельные методы
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
              ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
             oos.writeObject(cats);
