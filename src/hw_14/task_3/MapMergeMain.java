@@ -46,6 +46,10 @@ public class MapMergeMain {
 
         Map<String, List<Integer>> mapAll = new HashMap<>(firstMap);
 
+        /*
+        здесь хороший пример с использованием возможностей java 8
+        https://www.baeldung.com/java-merge-maps
+        */
         secondMap.forEach((key, list) -> {
             if (mapAll.containsKey(key)) {
                 mapAll.get(key).addAll(list);
