@@ -4,6 +4,8 @@ import java.io.*;
 
 //Есть текстовый файл. Нужно скопировать из него только те строки,
 // которые содержат слово pancakes и записать их в другой файл
+
+// +
 public class PancakesMain {
     private static final String PATH_IN = "src/hw_14/task_2/text";
     private static final String PATH_OUT = "src/hw_14/task_2/text_out";
