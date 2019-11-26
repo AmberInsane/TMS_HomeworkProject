@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.List;
 
 @FunctionalInterface
+// +
 public interface CatFileWriter {
     void writeCatToFile(List<Cat> catList, File file);
 }
