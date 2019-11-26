@@ -2,6 +2,7 @@ package hw_14.task_4;
 
 import java.util.stream.IntStream;
 
+// +
 public class StringUtils {
     static public String getPalindromes(String text) {
         String[] array = text.split(" ");
