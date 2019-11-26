@@ -13,6 +13,7 @@ public class MergeTwoSortedArrays {
         int secondIndex = 0;
         int mergeIndex = 0;
 
+        // эти цикла можно вынести в метод и назвать его, будет гораздо понятнее что происходит
         while ((mergeIndex < mergeArray.length) && (firstIndex < firstArray.length) && (secondIndex < secondArray.length)) {
             mergeArray[mergeIndex++] = firstArray[firstIndex] < secondArray[secondIndex] ? firstArray[firstIndex++] : secondArray[secondIndex++];
         }
