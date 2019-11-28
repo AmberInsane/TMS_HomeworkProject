@@ -5,10 +5,10 @@
   "faculty": "FAMCS",
   "lessons": [
     {
-      "name": "Computer Science"
+      "name": "Mathematical analysis"
     },
     {
-      "name": "Discrete Math"
+      "name": "Operating system"
     }
   ]
 }

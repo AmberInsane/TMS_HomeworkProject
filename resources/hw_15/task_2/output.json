@@ -1,0 +1,41 @@
+[
+  {
+    "group": "T891",
+    "faculty": "CT",
+    "lessons": [
+      {
+        "name": "Nothing, he hates them all"
+      }
+    ],
+    "firstname": "Dima",
+    "lastname": "Kolosovkiy"
+  },
+  {
+    "group": "3",
+    "faculty": "FAMCS",
+    "lessons": [
+      {
+        "name": "Computer Science"
+      },
+      {
+        "name": "Discrete Math"
+      }
+    ],
+    "firstname": "Mary",
+    "lastname": "Stankevich"
+  },
+  {
+    "group": "1",
+    "faculty": "FAMCS",
+    "lessons": [
+      {
+        "name": "Mathematical analysis"
+      },
+      {
+        "name": "Operating system"
+      }
+    ],
+    "firstname": "Elena",
+    "lastname": "Vlasova"
+  }
+]

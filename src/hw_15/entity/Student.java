@@ -1,10 +1,18 @@
 package hw_15.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import hw_12.task_4.LambdaUserMain;
+
+import java.util.List;
+
 public class Student {
     private String group;
+    @JsonProperty("firstname")
     private String firstName;
+    @JsonProperty("lastname")
     private String secondName;
     private String faculty;
+    private List<Lesson> lessons;
 
     public String getGroup() {
         return group;
@@ -38,6 +46,14 @@ public class Student {
         this.faculty = faculty;
     }
 
+    public List<Lesson> getLessons() {
+        return lessons;
+    }
+
+    public void setLessons(List<Lesson> lessons) {
+        this.lessons = lessons;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -45,6 +61,7 @@ public class Student {
                 ", firstName='" + firstName + '\'' +
                 ", secondName='" + secondName + '\'' +
                 ", faculty='" + faculty + '\'' +
+                ", lessons=" + lessons +
                 '}';
     }
 }
