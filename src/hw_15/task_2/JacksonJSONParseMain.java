@@ -18,14 +18,16 @@ public class JacksonJSONParseMain {
 
         List<Student> students = readValuesFromDir(new File(DIR_PATH), mapper);
 
-        writeStudentsToFile(new File(DIR_PATH + "/output.json"), mapper, sortStudents(students));
+        writeStudentsToFile(new File(DIR_PATH + "/out/output.json"), mapper, sortStudents(students));
     }
 
     private static List<Student> readValuesFromDir(File direction, ObjectMapper mapper) throws IOException {
         List<Student> students = new ArrayList<>();
         for (File file : direction.listFiles()) {
-            Student student = mapper.readValue(file, Student.class);
-            students.add(student);
+            if (file.isFile()) {
+                Student student = mapper.readValue(file, Student.class);
+                students.add(student);
+            }
         }
         return students;
     }
