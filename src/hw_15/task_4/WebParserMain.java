@@ -17,27 +17,26 @@ public class WebParserMain {
     private static String URL = "https://kinogo.by/";
 
     public static void main(String[] args) throws IOException {
-        // Document doc = Jsoup.connect(URL).get();
         Element content = getContentFromURL(URL);
 
         List<Movie> movies = new LinkedList<>(getMoviesFromContent(content));
 
-        List<String> pageURLs = getURLS(content);
+        List<String> pageURLs = getURLS(content, 4);
 
-        //тут пока Received fatal alert: handshake_failure
-       /* for (String pageURL : pageURLs) {
+        //тут пока Received fatal alert: handshake_failure ИНОГДА
+        for (String pageURL : pageURLs) {
             content = getContentFromURL(pageURL);
             movies.addAll(getMoviesFromContent(content));
-        }*/
+        }
 
         movies.forEach(System.out::println);
     }
 
-    private static List<String> getURLS(Element content) {
+    private static List<String> getURLS(Element content, int numberPfPages) {
         Elements navigationElement = content.select("div.bot-navigation");
         Elements pages = navigationElement.select("a[href]");
 
-        return pages.stream().limit(5).map(page -> page.attr("href")).collect(Collectors.toList());
+        return pages.stream().limit(numberPfPages).map(page -> page.attr("href")).collect(Collectors.toList());
     }
 
     private static Element getContentFromURL(String pageURL) throws IOException {
@@ -48,14 +47,13 @@ public class WebParserMain {
     private static List<Movie> getMoviesFromContent(Element content) {
         ArrayList<Movie> movies = new ArrayList<>();
         Elements movieElements = content.select("div[data-id]");
-        movieElements.forEach(movieElement -> movies.add(createMovieFromElement(movieElement)));
 
+        movieElements.forEach(movieElement -> movies.add(createMovieFromElement(movieElement)));
         return movies;
     }
 
     private static Movie createMovieFromElement(Element movieElement) {
         Movie movie = new Movie();
-
         String title = movieElement.select("h2.zagolovki").text();
         if (!title.equals("")) {
             movie.setTitle(title);
@@ -107,6 +105,10 @@ public class WebParserMain {
     }
 
     private static String getTextSibling(Elements element) {
-        return element.first().nextSibling().toString().trim();
+        if (element.isEmpty()) {
+            return "";
+        } else {
+            return element.first().nextSibling().toString().trim();
+        }
     }
 }
