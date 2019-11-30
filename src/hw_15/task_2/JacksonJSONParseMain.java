@@ -33,6 +33,8 @@ public class JacksonJSONParseMain {
     }
 
     private static List<Student> sortStudents(List<Student> students) {
+        //Collections.sort(studentList, Comparator.comparing(Student::getName).thenComparing(Student::getSurname));
+        // так короче и понятнее
         students.sort((firstStudent, secondStudent) -> {
             int nameResult = firstStudent.getSecondName().compareTo(secondStudent.getSecondName());
             if (nameResult >= 0) {
