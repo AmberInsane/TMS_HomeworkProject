@@ -1,5 +1,6 @@
 package hw_15.entity;
 
+// +
 public class Lesson {
     private String name;
 

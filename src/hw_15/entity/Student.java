@@ -5,6 +5,7 @@ import hw_12.task_4.LambdaUserMain;
 
 import java.util.List;
 
+// +
 public class Student {
     private String group;
     @JsonProperty("firstname")
