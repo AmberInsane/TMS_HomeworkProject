@@ -1,4 +1,4 @@
-package hw_16.hw_15_check.homework.src.homework_15.entity;
+package hw_16.hw_15_check.src.homework_15.entity;
 
 // Subjects -> Subject
 public class Subjects {

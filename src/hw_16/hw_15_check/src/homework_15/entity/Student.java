@@ -1,4 +1,4 @@
-package hw_16.hw_15_check.homework.src.homework_15.entity;
+package hw_16.hw_15_check.src.homework_15.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -10,7 +10,7 @@ public class Student {
     private String name;
     private String surname;
     private String faculty;
-    @JsonProperty("favSubject") // @Mary парамер в аннотанции повторяет название поля -> аннотация не нужна
+    @JsonProperty("favSubject") // @Mary параметр в аннотанции повторяет название поля -> аннотация не нужна
     private List<Subjects> favSubject;
     private int groupNum;
 

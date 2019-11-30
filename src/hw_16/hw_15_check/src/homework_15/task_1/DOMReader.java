@@ -1,6 +1,6 @@
-package hw_16.hw_15_check.homework.src.homework_15.task_1;
+package hw_16.hw_15_check.src.homework_15.task_1;
 
-import hw_16.hw_15_check.homework.src.homework_15.entity.Student;
+import hw_16.hw_15_check.src.homework_15.entity.Student;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
