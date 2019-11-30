@@ -1,0 +1,17 @@
+{
+  "id": "3",
+  "groupNum": 10,
+  "name": "Dima",
+  "surname": "Malush",
+  "faculty": "Physics",
+  "favSubject": [
+    {
+      "subName": "Physics",
+      "mark": 6
+    },
+    {
+      "subName": "Programming",
+      "mark": 10
+    }
+  ]
+}

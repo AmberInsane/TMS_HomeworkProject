@@ -1,0 +1,27 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+<students>
+    <student id="1">
+        <groupNum>29</groupNum>
+        <name>Artur</name>
+        <surname>Kuznecov</surname>
+        <faculty>java</faculty>
+    </student>
+    <student id="2">
+        <groupNum>30</groupNum>
+        <name>Dima</name>
+        <surname>Nikitin</surname>
+        <faculty>python</faculty>
+    </student>
+    <student id="3">
+        <groupNum>28</groupNum>
+        <name>Alex</name>
+        <surname>Orlov</surname>
+        <faculty>PHP</faculty>
+    </student>
+    <student id="4">
+        <groupNum>44</groupNum>
+        <name>Pavel</name>
+        <surname>Kynderov</surname>
+        <faculty>Rybu</faculty>
+    </student>
+</students>

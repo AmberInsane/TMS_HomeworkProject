@@ -1,0 +1,17 @@
+{
+  "id": "1",
+  "groupNum": 29,
+  "name": "Artur",
+  "surname": "Kuznecov",
+  "faculty": "Math",
+  "favSubject": [
+    {
+      "subName": "Math",
+      "mark": 9
+    },
+    {
+      "subName": "Programming",
+      "mark": 7
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "2",
+  "groupNum": 40,
+  "name": "Dima",
+  "surname": "Romanov",
+  "faculty": "English",
+  "favSubject": [
+    {
+      "subName": "English",
+      "mark": 7
+    },
+    {
+      "subName": "Programming",
+      "mark": 6
+    }
+  ]
+}
