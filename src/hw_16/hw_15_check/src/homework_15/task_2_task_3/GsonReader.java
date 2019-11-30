@@ -1,7 +1,7 @@
-package hw_16.hw_15_check.homework.src.homework_15.task_2_task_3;
+package hw_16.hw_15_check.src.homework_15.task_2_task_3;
 
 import com.google.gson.Gson;
-import hw_16.hw_15_check.homework.src.homework_15.entity.Student;
+import hw_16.hw_15_check.src.homework_15.entity.Student;
 
 import java.io.File;
 import java.io.FileReader;
