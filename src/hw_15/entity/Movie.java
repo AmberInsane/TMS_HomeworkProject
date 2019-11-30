@@ -2,6 +2,7 @@ package hw_15.entity;
 
 import java.util.List;
 
+// +
 public class Movie {
     private String title;
     private Integer year;
