@@ -14,20 +14,19 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class WebParserMain {
-    private static String URL = "https://kinogo.by/";
+    private static String URL = "http://kinogo.club/page/";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         Element content = getContentFromURL(URL);
-
         List<Movie> movies = new LinkedList<>(getMoviesFromContent(content));
 
         List<String> pageURLs = getURLS(content, 4);
 
         //тут пока Received fatal alert: handshake_failure ИНОГДА
-        for (String pageURL : pageURLs) {
+     /*   for (String pageURL : pageURLs) {
             content = getContentFromURL(pageURL);
             movies.addAll(getMoviesFromContent(content));
-        }
+        }*/
 
         movies.forEach(System.out::println);
     }
@@ -46,8 +45,7 @@ public class WebParserMain {
 
     private static List<Movie> getMoviesFromContent(Element content) {
         ArrayList<Movie> movies = new ArrayList<>();
-        Elements movieElements = content.select("div[data-id]");
-
+        Elements movieElements = content.select("div.shortstory");
         movieElements.forEach(movieElement -> movies.add(createMovieFromElement(movieElement)));
         return movies;
     }
@@ -64,7 +62,7 @@ public class WebParserMain {
             movie.setYear(Integer.parseInt(year));
         }
 
-        String country = getTextSibling(movieElement.select("b:contains(Страна:)"));
+        String country = movieElement.select("b:contains(Страна:)").first().nextElementSibling().text();
         if (!country.equals("")) {
             movie.setCountry(country);
         }
