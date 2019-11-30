@@ -27,6 +27,7 @@ public class DomParserMain {
         List<Student> students = new ArrayList<>();
         NodeList nodeList = document.getDocumentElement().getChildNodes();
 
+        // стоит все же выносить в отдельные методы куски логики
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
             if (node instanceof Element) {
@@ -59,6 +60,7 @@ public class DomParserMain {
             }
         }
 
+        // students.forEach(System.out::println); твой способ не ошибка
         students.forEach(employee -> System.out.println(employee));
     }
 }
