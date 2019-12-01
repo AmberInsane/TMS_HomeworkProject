@@ -58,7 +58,8 @@ public class JacksonJsonReader {
     private static void writeListToFile(String fileName, List<Student> students) {
         try (FileWriter fileWriter = new FileWriter(new File(NEW_FILE_PATH));
              BufferedWriter buff = new BufferedWriter(fileWriter)) { //@Mary запись объектов как строк. ObjectOutputStream подошел бы лучше
-            buff.write(String.valueOf(students)); //@Mary не ошибка, но короче students.toString()
+            buff.write(String.valueOf(students)); //@Mary не ошибка, но короче students.toString() 
+            // не, записывать объект как строку вообще грустная история, не надо так делать
             buff.flush();
             System.out.println("File has been successfully written");
         } catch (IOException e) {
