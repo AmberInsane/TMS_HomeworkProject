@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 //@Mary Прочитать студентов при помощи Jackson JSON парсера, но ладн
+// это да...
 public class GsonReader {
     public static void main(String[] args) throws IOException {
         // путь в константу и он должен быть относительным, а не абсолютным
