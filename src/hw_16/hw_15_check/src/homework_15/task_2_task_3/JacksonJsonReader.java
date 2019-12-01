@@ -23,6 +23,7 @@ public class JacksonJsonReader {
     public static void main(String[] args) throws IOException {
         List<Student> students = ListOfAllJson(FOLDER_PATH);
         writeListToFile(NEW_FILE_PATH, students); //@Mary излишняя запись в файл
+        // здесь скорее двумя способами, норм
         writeListToJsonFile(NEW_JSON_FILE_PATH, students);
     }
 
