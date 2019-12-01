@@ -10,7 +10,8 @@ public class Student {
     private String name;
     private String surname;
     private String faculty;
-    @JsonProperty("favSubject") // @Mary параметр в аннотанции повторяет название поля -> аннотация не нужна
+    @JsonProperty("favSubject") // @Mary параметр в аннотанции повторяет название поля -> аннотация не нужна  
+    // ага,я это как-то пропустил у него
     private List<Subjects> favSubject;
     private int groupNum;
 
