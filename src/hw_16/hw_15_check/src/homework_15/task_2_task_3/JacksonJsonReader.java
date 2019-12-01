@@ -29,7 +29,6 @@ public class JacksonJsonReader {
     private static Student readJSON(File fileName) throws IOException {
         //@Mary на каждый файл создается ObjectMapper, достаточно одного для всех
         ObjectMapper objectMapper = new ObjectMapper();
-        //@Mary String.valueOf(fileName) -> fileName.getName()
         //@Mary new File(String.valueOf(fileName))) излишне, первым параметром достаточно было передать fileName
         Student student = objectMapper.readValue(new File(String.valueOf(fileName)), Student.class);
         return student;
