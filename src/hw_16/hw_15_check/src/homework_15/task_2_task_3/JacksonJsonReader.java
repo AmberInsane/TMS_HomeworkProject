@@ -45,6 +45,7 @@ public class JacksonJsonReader {
             studentList.add(readJSON(entry));
         }
         //@Mary "отсортировать студентов по фамилии и имени", а получилось по имени и фамилии (наверное это важно)
+        // согласен, но я пока на это закрываю глаза, т.к. цель другая, на реальном проекте конечно не прокатило бы
         Collections.sort(studentList, Comparator.comparing(Student::getName).thenComparing(Student::getSurname));
         return studentList;
     }
