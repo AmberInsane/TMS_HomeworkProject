@@ -4,6 +4,7 @@ public class LooperMain {
     public static void main(String[] args) throws InterruptedException {
         Looper mainLooper = new Looper();
 
+        // я думаю можно было класс Looper сделать Runnable, тогда не пришлось бы дополнительно код писать с лямбдой
         Runnable runnableLoop = () -> {
             try {
                 new Looper().printNumbers();
