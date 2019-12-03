@@ -1,5 +1,6 @@
 package hw_16.task_2;
 
+// +
 public class Looper {
     private static final int MAX_NUM = 20;
 
