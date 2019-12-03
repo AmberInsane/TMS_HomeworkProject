@@ -1,7 +1,7 @@
 package hw_16.task_3;
 
 public class SuppliersMain {
-    private static ToyStore store;
+    private static ToyStore store; // думаю лучше в локальную переменную и передавать в метод getSupplierThread()
 
     public static void main(String[] args) throws InterruptedException {
         store = new ToyStore();
