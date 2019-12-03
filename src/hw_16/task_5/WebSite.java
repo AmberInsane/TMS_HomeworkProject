@@ -1,5 +1,6 @@
 package hw_16.task_5;
 
+// +
 public class WebSite {
     private String url;
     private WebsiteType type;
