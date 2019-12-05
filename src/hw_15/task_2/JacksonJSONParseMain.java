@@ -6,9 +6,7 @@ import hw_15.entity.Student;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class JacksonJSONParseMain {
     private static String DIR_PATH = "resources/hw_15/task_2";
@@ -35,13 +33,7 @@ public class JacksonJSONParseMain {
     private static List<Student> sortStudents(List<Student> students) {
         //Collections.sort(studentList, Comparator.comparing(Student::getName).thenComparing(Student::getSurname));
         // так короче и понятнее
-        students.sort((firstStudent, secondStudent) -> {
-            int nameResult = firstStudent.getSecondName().compareTo(secondStudent.getSecondName());
-            if (nameResult >= 0) {
-                nameResult = firstStudent.getFirstName().compareTo(secondStudent.getFirstName());
-            }
-            return nameResult;
-        });
+        Collections.sort(students, Comparator.comparing(Student::getSecondName).thenComparing(Student::getFirstName));
         return students;
     }
 

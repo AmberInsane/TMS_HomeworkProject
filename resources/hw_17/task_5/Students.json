@@ -1,0 +1,26 @@
+[
+  {
+    "group": "T891",
+    "faculty": "CT",
+    "firstname": "Dima",
+    "lastname": "Kolosovkiy"
+  },
+  {
+    "group": "3",
+    "faculty": "FAMCS",
+    "firstname": "Mary",
+    "lastname": "Stankevich"
+  },
+  {
+    "group": "1",
+    "faculty": "FAMCS",
+    "firstname": "Elena",
+    "lastname": "Vlasova"
+  },
+  {
+    "group": "T666",
+    "faculty": "CT",
+    "firstname": "Nadia",
+    "lastname": "Fonasova"
+  }
+]

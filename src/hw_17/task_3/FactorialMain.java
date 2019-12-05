@@ -1,25 +1,29 @@
 package hw_17.task_3;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.*;
 
 public class FactorialMain {
-    private static final int number = 5;
+    private static final int number = 10;
+    private static final int threadsNumber = 2;
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
+        ExecutorService executorService = Executors.newFixedThreadPool(threadsNumber);
+
         FactorialPartCalculator factorialFirstPart = new FactorialPartCalculator(1, number / 2);
         FactorialPartCalculator factorialSecondPart = new FactorialPartCalculator(number / 2 + 1, number);
 
-        FutureTask<Long> futureFirstPart = new FutureTask<>(factorialFirstPart);
-        FutureTask<Long> futureSecondPart = new FutureTask<>(factorialSecondPart);
+        List<Future<Long>> futures = executorService.invokeAll(Arrays.asList(factorialFirstPart, factorialSecondPart));
 
-        new Thread(futureFirstPart).start();
-        new Thread(futureSecondPart).start();
+        Long factorial = futures.get(0).get();
+        for (int i = 1; i < futures.size(); i++) {
+            factorial *= futures.get(i).get();
+        }
 
-        Long firstPartResult = futureFirstPart.get();
-        Long secondPartResult = futureSecondPart.get();
+        System.out.println(factorial);
 
-        Long result = firstPartResult * secondPartResult;
-        System.out.println(result);
+        executorService.awaitTermination(500, TimeUnit.MILLISECONDS);
+        executorService.shutdownNow();
     }
 }

@@ -1,0 +1,86 @@
+[
+  {
+    "group": "T891",
+    "faculty": "CT",
+    "books": [
+      {
+        "name": "Harry Potter and The Deathly Hallows",
+        "year": 2007
+      }
+    ],
+    "firstname": "Dima",
+    "lastname": "Kolosovkiy"
+  },
+  {
+    "group": "3",
+    "faculty": "FAMCS",
+    "books": [
+      {
+        "name": "Harry Potter and The Philosopher's Stone",
+        "year": 1997
+      },
+      {
+        "name": "Harry Potter and The Goblet of Fire",
+        "year": 2000
+      },
+      {
+        "name": "Harry Potter and The Prisoner of Azkaban",
+        "year": 1999
+      },
+      {
+        "name": "Harry Potter and The Half-Blood Prince",
+        "year": 2005
+      }
+    ],
+    "firstname": "Mary",
+    "lastname": "Stankevich"
+  },
+  {
+    "group": "1",
+    "faculty": "FAMCS",
+    "books": [
+      {
+        "name": "Harry Potter and The Half-Blood Prince",
+        "year": 2005
+      },
+      {
+        "name": "Harry Potter and The Order of the Phoenix",
+        "year": 2003
+      },
+      {
+        "name": "Harry Potter and The Philosopher's Stone",
+        "year": 1997
+      },
+      {
+        "name": "Harry Potter and The Chamber of Secrets",
+        "year": 1998
+      }
+    ],
+    "firstname": "Elena",
+    "lastname": "Vlasova"
+  },
+  {
+    "group": "T666",
+    "faculty": "CT",
+    "books": [
+      {
+        "name": "Harry Potter and The Half-Blood Prince",
+        "year": 2005
+      },
+      {
+        "name": "Harry Potter and The Philosopher's Stone",
+        "year": 1997
+      },
+      {
+        "name": "Harry Potter and The Order of the Phoenix",
+        "year": 2003
+      },
+      {
+        "name": "Harry Potter and The Prisoner of Azkaban",
+        "year": 1999
+      }
+    ],
+    "firstname": "Nadia",
+    "lastname": "Fonasova"
+  }
+]
