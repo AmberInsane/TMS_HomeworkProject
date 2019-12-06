@@ -1,6 +1,6 @@
 package hw_17.task_3;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -15,7 +15,6 @@ public class FactorialMain {
 
         for (int i = 0; i < threadsNumber; i++) {
            tasksList.add(new FactorialPartCalculator(i * number / threadsNumber + 1, (i + 1) * number / threadsNumber));
-        //FactorialPartCalculator factorialSecondPart = new FactorialPartCalculator(number / 2 + 1, number)
         }
 
         List<Future<Long>> futures = executorService.invokeAll(tasksList);
