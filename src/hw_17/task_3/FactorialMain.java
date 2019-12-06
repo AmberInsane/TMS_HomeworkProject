@@ -11,10 +11,14 @@ public class FactorialMain {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         ExecutorService executorService = Executors.newFixedThreadPool(threadsNumber);
 
-        FactorialPartCalculator factorialFirstPart = new FactorialPartCalculator(1, number / 2);
-        FactorialPartCalculator factorialSecondPart = new FactorialPartCalculator(number / 2 + 1, number);
+        List<Callable<Long>> tasksList = new ArrayList<>();
 
-        List<Future<Long>> futures = executorService.invokeAll(Arrays.asList(factorialFirstPart, factorialSecondPart));
+        for (int i = 0; i < threadsNumber; i++) {
+           tasksList(new FactorialPartCalculator((i * number / threadsNumber) + 1, (i + 1) * number / threadsNumber));
+        //FactorialPartCalculator factorialSecondPart = new FactorialPartCalculator(number / 2 + 1, number)
+        }
+
+        List<Future<Long>> futures = executorService.invokeAll(tasksList);
 
         Long factorial = futures.get(0).get();
         for (int i = 1; i < futures.size(); i++) {
