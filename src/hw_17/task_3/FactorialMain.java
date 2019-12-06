@@ -14,7 +14,7 @@ public class FactorialMain {
         List<Callable<Long>> tasksList = new ArrayList<>();
 
         for (int i = 0; i < threadsNumber; i++) {
-           tasksList(new FactorialPartCalculator((i * number / threadsNumber) + 1, (i + 1) * number / threadsNumber));
+           tasksList.add(new FactorialPartCalculator(i * number / threadsNumber + 1, (i + 1) * number / threadsNumber));
         //FactorialPartCalculator factorialSecondPart = new FactorialPartCalculator(number / 2 + 1, number)
         }
 
