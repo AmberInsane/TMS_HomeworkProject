@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.concurrent.Callable;
 
 // я бы предложил тебе возвращать не Integer, а объект, в котором было бы кол-во слов + имя файла
-public class FileWordCounter implements Callable<Integer> {
+public class FileWordCounter implements Callable<FileWords> {
     private File file;
 
     public FileWordCounter(File file) {
@@ -15,8 +15,8 @@ public class FileWordCounter implements Callable<Integer> {
     }
 
     @Override
-    public Integer call() {
-        Integer counter = 0;
+    public FileWords call() {
+        int counter = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             System.out.println(Thread.currentThread().getName());
             String line;
@@ -26,6 +26,6 @@ public class FileWordCounter implements Callable<Integer> {
         } catch (IOException e) {
             System.err.println("Problem with reading from file: " + e.getMessage());
         }
-        return counter;
+        return new FileWords(file.getName(), counter);
     }
 }

@@ -6,15 +6,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class MultithreadedList<T> {
-    private List<T> list;
+    private List<T> list = new ArrayList<>();
 
-    private ReentrantLock locker;
-
-    public MultithreadedList() {
-        // нету особо смысла в таком конструкторе, можно сразу в месте объявления поля делать инициализацию
-        list = new ArrayList<>();
-        locker = new ReentrantLock();
-    }
+    private ReentrantLock locker = new ReentrantLock();
 
     public List<T> getList() {
         return list;

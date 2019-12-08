@@ -20,12 +20,12 @@ public class WordsCounterMain {
                 File[] dirFiles = dirFile.listFiles();
 
                 ExecutorService executorService = Executors.newFixedThreadPool(dirFiles.length);
-                List<Future<Integer>> list = new ArrayList<>();
+                List<Future<FileWords>> list = new ArrayList<>();
                 for (File file : dirFiles) {
                     list.add(executorService.submit(new FileWordCounter(file)));
                 }
                 for (int i = 0; i < dirFiles.length; i++) {
-                    System.out.println("File " + dirFiles[i] + " number of words " + list.get(i).get());
+                    System.out.println(list.get(i).get());
                 }
 
                 System.out.println("Number of files " + dirFiles.length);

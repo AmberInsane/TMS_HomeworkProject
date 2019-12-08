@@ -3,7 +3,7 @@ package hw_17.task_6;
 public class ShipThread implements Runnable {
     private TransportShip ship;
     private Berth berth;
-    Tunnel tunnel;
+    private Tunnel tunnel;
 
     public ShipThread(TransportShip ship, Berth berth, Tunnel tunnel) {
         this.ship = ship;
@@ -30,7 +30,6 @@ public class ShipThread implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 
     private void unloadShip() {
