@@ -11,6 +11,7 @@ public class MultithreadedList<T> {
     private ReentrantLock locker;
 
     public MultithreadedList() {
+        // нету особо смысла в таком конструкторе, можно сразу в месте объявления поля делать инициализацию
         list = new ArrayList<>();
         locker = new ReentrantLock();
     }
