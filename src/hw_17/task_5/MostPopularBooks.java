@@ -22,14 +22,16 @@ public class MostPopularBooks {
         List<Student> students = Arrays.asList(readJSONArray(new File(FILE_PATH), mapper, Student[].class));
 
         List<Book> tops = getTopBooks(students, numberOFTop);
-
-        // и вишенкой на торте вывод на экран в отдельный метод и через String.format()
-        System.out.println("Top-" + numberOFTop + " of student's books are:");
-        for (int i = 0; i < tops.size(); i++) {
-            System.out.println((i + 1) + ". " + tops.get(i));
-        }
+        printTopList(tops);
     }
 
+    private static void printTopList(List<Book> tops) {
+        System.out.println(String.format("Top-%d of student's books are:", tops.size()));
+
+        for (int i = 0; i < tops.size(); i++) {
+            System.out.println(String.format("%d. %s", (i + 1), tops.get(i)));
+        }
+    }
     private static List<Book> getTopBooks(List<Student> students, int numberOFTop) {
         Map<Book, Long> countedBooks = students.stream()
                 .map(Student::getBooks)

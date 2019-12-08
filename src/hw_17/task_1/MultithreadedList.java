@@ -23,15 +23,28 @@ public class MultithreadedList<T> {
     public void add(T element) {
 //        https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Lock.html#tryLock()
         // у тебя не совсем корректно написана логика, if должен юыть за пределами try
+//        try {
+//            boolean isLocked = locker.tryLock(50, TimeUnit.MILLISECONDS);
+//            if (isLocked) {
+//                list.add(element);
+//            }
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        } finally {
+//            locker.unlock();
+//        }
+
         try {
             boolean isLocked = locker.tryLock(50, TimeUnit.MILLISECONDS);
             if (isLocked) {
-                list.add(element);
+                try {
+                    list.add(element);
+                } finally {
+                    locker.unlock();
+                }
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
-        } finally {
-            locker.unlock();
         }
     }
 }
