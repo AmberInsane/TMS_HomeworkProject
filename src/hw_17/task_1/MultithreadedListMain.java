@@ -1,5 +1,6 @@
 package hw_17.task_1;
 
+// +
 public class MultithreadedListMain {
     public static void main(String[] args) throws InterruptedException {
         MultithreadedList<String> list = new MultithreadedList<>();
