@@ -29,7 +29,7 @@ public class MultithreadedList<T> {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            locker.unlock();
+            locker.unlock(); // не получала IllegalMonitorStateException?
         }
     }
 }
