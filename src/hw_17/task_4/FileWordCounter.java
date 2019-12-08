@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.concurrent.Callable;
 
+// я бы предложил тебе возвращать не Integer, а объект, в котором было бы кол-во слов + имя файла
 public class FileWordCounter implements Callable<Integer> {
     private File file;
 
