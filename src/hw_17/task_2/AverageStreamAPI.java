@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalDouble;
 
+// +
 public class AverageStreamAPI {
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>();
