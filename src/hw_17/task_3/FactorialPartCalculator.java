@@ -2,6 +2,7 @@ package hw_17.task_3;
 
 import java.util.concurrent.Callable;
 
+// +
 public class FactorialPartCalculator implements Callable<Long> {
     private int start;
     private int end;
