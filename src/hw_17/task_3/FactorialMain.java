@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
+// +
 public class FactorialMain {
     private static final int number = 10;
     private static final int threadsNumber = 2;
