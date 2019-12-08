@@ -8,6 +8,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+// +
 public class WordsCounterMain {
     private static final String DIR_PATH = "resources/hw_17/task_4";
 
