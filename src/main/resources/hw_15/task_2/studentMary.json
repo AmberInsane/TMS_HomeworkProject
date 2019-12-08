@@ -1,0 +1,14 @@
+{
+  "firstname": "Mary",
+  "lastname": "Stankevich",
+  "group": "3",
+  "faculty": "FAMCS",
+  "lessons": [
+    {
+      "name": "Computer Science"
+    },
+    {
+      "name": "Discrete Math"
+    }
+  ]
+}

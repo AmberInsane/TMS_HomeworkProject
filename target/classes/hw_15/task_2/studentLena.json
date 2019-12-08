@@ -1,0 +1,14 @@
+{
+  "firstname": "Elena",
+  "lastname": "Vlasova",
+  "group": "1",
+  "faculty": "FAMCS",
+  "lessons": [
+    {
+      "name": "Mathematical analysis"
+    },
+    {
+      "name": "Operating system"
+    }
+  ]
+}

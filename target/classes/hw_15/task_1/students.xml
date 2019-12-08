@@ -1,0 +1,14 @@
+<students>
+    <student>
+        <group>3</group>
+        <firstName>Mary</firstName>
+        <secondName>Stankevich</secondName>
+        <faculty>FAMCS</faculty>
+    </student>
+    <student>
+        <group>1</group>
+        <firstName>Elena</firstName>
+        <secondName>Vlasova</secondName>
+        <faculty>FAMCS</faculty>
+    </student>
+</students>
