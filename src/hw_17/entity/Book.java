@@ -2,6 +2,7 @@ package hw_17.entity;
 
 import java.util.Objects;
 
+// +
 public class Book {
     private String name;
     private Integer year;
