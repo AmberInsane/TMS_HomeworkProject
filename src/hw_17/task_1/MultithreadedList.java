@@ -21,6 +21,8 @@ public class MultithreadedList<T> {
     }
 
     public void add(T element) {
+//        https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Lock.html#tryLock()
+        // у тебя не совсем корректно написана логика, if должен юыть за пределами try
         try {
             boolean isLocked = locker.tryLock(50, TimeUnit.MILLISECONDS);
             if (isLocked) {
@@ -29,7 +31,7 @@ public class MultithreadedList<T> {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            locker.unlock(); // не получала IllegalMonitorStateException? если вызвать unlock() у незалоченного объекта
+            locker.unlock();
         }
     }
 }
