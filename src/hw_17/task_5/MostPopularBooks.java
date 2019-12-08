@@ -23,6 +23,7 @@ public class MostPopularBooks {
 
         List<Book> tops = getTopBooks(students, numberOFTop);
 
+        // и вишенкой на торте вывод на экран в отдельный метод и через String.format()
         System.out.println("Top-" + numberOFTop + " of student's books are:");
         for (int i = 0; i < tops.size(); i++) {
             System.out.println((i + 1) + ". " + tops.get(i));
