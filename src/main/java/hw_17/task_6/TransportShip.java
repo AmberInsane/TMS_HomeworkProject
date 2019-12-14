@@ -1,5 +1,6 @@
 package hw_17.task_6;
 
+// +
 public class TransportShip {
     private int number;
     private int capacity;
