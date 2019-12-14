@@ -22,6 +22,7 @@ public class ShipThread implements Runnable {
         try {
             tunnel.acquire();
 
+            // думаю лучшим способом сделать енам с сообщениями и передавать их в метод, чем тернарный оператор
             System.out.println(String.format("%s goes %s the tunnel", ship, isForward ? "forward" : "backward"));
             Thread.sleep(50 * ship.getCapacity());
 
