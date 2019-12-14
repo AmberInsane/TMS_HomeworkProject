@@ -11,6 +11,7 @@ public class ShipsMain {
     private static int SHIP_NUMBER = 5;
     private static int[] SHIPS_CAPACITY = {20, 50, 100};
 
+    // выглядит неплохо, молодец
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i < SHIP_NUMBER; i++) {
             TransportShip ship = new TransportShip(i, SHIPS_CAPACITY[(int) (Math.random() * SHIPS_CAPACITY.length)]);
