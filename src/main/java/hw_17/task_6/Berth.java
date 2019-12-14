@@ -2,6 +2,7 @@ package hw_17.task_6;
 
 import java.util.concurrent.Semaphore;
 
+// +
 public class Berth extends Semaphore {
     private long unloadTimePerTon;
 
